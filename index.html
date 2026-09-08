@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarek Boudmagh — Digital & Data Specialist</title>
+<meta name="description" content="Portfolio de Tarek Boudmagh, Digital & Data Specialist | Real Estate & Investment | Webmaster.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0B0F19;
+    --bg-elevated: #111827;
+    --bg-elevated-2: #151d2e;
+    --border: #22293b;
+    --text: #F8FAFC;
+    --text-dim: #94A3B8;
+    --text-faint: #5b6980;
+    --accent: #4F8CFF;
+    --accent-soft: rgba(79,140,255,0.12);
+    --accent-2: #22C55E;
+    --accent-2-soft: rgba(34,197,94,0.12);
+    --font-display: 'Manrope', 'Segoe UI', system-ui, sans-serif;
+    --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--font-body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  h1,h2,h3,h4{font-family:var(--font-display); font-weight:800; text-wrap:balance; margin:0; color:var(--text);}
+  p{margin:0; color:var(--text-dim);}
+  a{color:inherit; text-decoration:none;}
+  ::selection{background:var(--accent-soft); color:var(--text);}
+
+  .mono{font-family:var(--font-mono);}
+  .eyebrow{
+    font-family:var(--font-mono);
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--accent);
+    display:flex; align-items:center; gap:0.5rem;
+  }
+  .eyebrow::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); flex:none;}
+
+  .wrap{max-width:1180px; margin:0 auto; padding:0 2rem;}
+  @media (max-width:640px){ .wrap{padding:0 1.25rem;} }
+
+  section{padding:6.5rem 0;}
+  @media (max-width:820px){ section{padding:4.5rem 0;} }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(11,15,25,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  nav{
+    max-width:1180px; margin:0 auto; padding:0 2rem;
+    height:68px; display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{font-family:var(--font-display); font-weight:800; font-size:1rem; letter-spacing:0.02em;}
+  .nav-links{display:flex; align-items:center; gap:2.1rem;}
+  .nav-links a{
+    font-size:0.92rem; color:var(--text-dim); font-weight:500;
+    position:relative; padding:0.3rem 0; transition:color 0.15s;
+  }
+  .nav-links a:hover{color:var(--text);}
+  .nav-links a::after{
+    content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px;
+    background:var(--accent); transform:scaleX(0); transform-origin:left;
+    transition:transform 0.2s;
+  }
+  .nav-links a:hover::after{transform:scaleX(1);}
+  .btn{
+    font-family:var(--font-body); font-weight:600; font-size:0.88rem;
+    padding:0.65rem 1.3rem; border-radius:8px; border:1px solid transparent;
+    cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem;
+    transition:transform 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .btn:focus-visible, a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .btn-primary{background:var(--accent); color:#04101f;}
+  .btn-primary:hover{transform:translateY(-1px); background:#6a9fff;}
+  .btn-ghost{border-color:var(--border); color:var(--text);}
+  .btn-ghost:hover{border-color:var(--accent);}
+  .nav-cta{display:none;}
+  @media (min-width:900px){ .nav-cta{display:inline-flex;} }
+  .nav-links{display:none;}
+  @media (min-width:820px){ .nav-links{display:flex;} }
+  .burger{
+    display:flex; background:none; border:1px solid var(--border); border-radius:8px;
+    color:var(--text); width:40px; height:40px; align-items:center; justify-content:center;
+    font-size:1.1rem; cursor:pointer;
+  }
+  @media (min-width:820px){ .burger{display:none;} }
+  #mobile-menu{
+    display:flex; flex-direction:column; gap:0.2rem; padding:0.5rem 1.25rem 1.25rem;
+    border-bottom:1px solid var(--border); background:var(--bg);
+  }
+  #mobile-menu a{padding:0.7rem 0; color:var(--text-dim); font-size:0.95rem; border-bottom:1px solid var(--border);}
+  #mobile-menu a:last-child{border-bottom:none;}
+
+  /* ---------- HERO ---------- */
+  .hero{padding:5rem 0 4rem;}
+  .hero-grid{display:grid; grid-template-columns:1.15fr 1fr; gap:3.5rem; align-items:center;}
+  @media (max-width:960px){ .hero-grid{grid-template-columns:1fr; gap:3rem;} }
+
+  .hero h1{font-size:clamp(1.9rem, 3.6vw, 2.6rem); line-height:1.16; margin-top:0.6rem;}
+  .hero .name{
+    font-family:var(--font-mono); font-size:0.85rem; letter-spacing:0.08em;
+    color:var(--text-faint); text-transform:uppercase;
+  }
+  .hero-lede{margin-top:1.3rem; font-size:1.05rem; max-width:46ch;}
+  .hero-actions{display:flex; gap:0.9rem; margin-top:2rem; flex-wrap:wrap;}
+  .hero-tags{
+    display:flex; flex-wrap:wrap; gap:0.55rem 1.6rem; margin-top:2.6rem;
+    padding-top:1.6rem; border-top:1px solid var(--border);
+  }
+  .hero-tags span{
+    font-family:var(--font-mono); font-size:0.74rem; letter-spacing:0.09em;
+    color:var(--text-faint); text-transform:uppercase;
+  }
+
+  /* dashboard visual */
+  .panel{
+    background:linear-gradient(180deg, var(--bg-elevated), var(--bg-elevated-2));
+    border:1px solid var(--border); border-radius:16px;
+    padding:1.5rem 1.5rem 1.7rem;
+    box-shadow:0 30px 60px -30px rgba(0,0,0,0.6);
+  }
+  .panel-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:1.2rem;}
+  .panel-title{font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.1em; color:var(--text-dim); text-transform:uppercase;}
+  .live-dot{display:flex; align-items:center; gap:0.4rem; font-family:var(--font-mono); font-size:0.68rem; color:var(--accent-2);}
+  .live-dot i{width:6px; height:6px; border-radius:50%; background:var(--accent-2); animation:pulse 1.8s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1; box-shadow:0 0 0 0 rgba(34,197,94,0.45);} 50%{opacity:0.7; box-shadow:0 0 0 5px rgba(34,197,94,0);}}
+
+  .stat-row{display:flex; justify-content:space-between; align-items:baseline; padding:0.55rem 0; border-bottom:1px solid var(--border);}
+  .stat-row:last-of-type{border-bottom:none;}
+  .stat-label{font-size:0.85rem; color:var(--text-dim);}
+  .stat-value{font-family:var(--font-mono); font-weight:500; font-size:1rem;}
+  .stat-value.up{color:var(--accent-2);}
+
+  .bars{display:flex; align-items:flex-end; gap:6px; height:64px; margin:1.3rem 0 0.6rem;}
+  .bars i{
+    flex:1; background:linear-gradient(180deg, var(--accent), rgba(79,140,255,0.25));
+    border-radius:3px 3px 0 0; display:block;
+  }
+
+  .panel-foot{
+    display:flex; align-items:center; gap:0.5rem; margin-top:1rem; padding-top:1rem;
+    border-top:1px solid var(--border); font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint);
+  }
+  .panel-foot i{width:6px; height:6px; border-radius:50%; background:var(--accent-2); flex:none;}
+
+  /* ---------- SECTION HEAD ---------- */
+  .section-head{max-width:640px; margin-bottom:3rem;}
+  .section-head h2{font-size:clamp(1.6rem, 3vw, 2.2rem); margin-top:0.7rem;}
+  .section-head p{margin-top:1rem; font-size:1.02rem;}
+
+  /* ---------- WHAT I DO ---------- */
+  .capabilities{display:grid; grid-template-columns:repeat(4, 1fr); gap:1.1rem;}
+  @media (max-width:900px){ .capabilities{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:560px){ .capabilities{grid-template-columns:1fr;} }
+  .cap-card{
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
+    padding:1.6rem 1.4rem; transition:border-color 0.2s, transform 0.2s;
+  }
+  .cap-card:hover{border-color:var(--accent); transform:translateY(-3px);}
+  .cap-num{font-family:var(--font-mono); font-size:0.75rem; color:var(--text-faint);}
+  .cap-tag{font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.1em; color:var(--accent); text-transform:uppercase; margin-top:0.8rem; display:block;}
+  .cap-card h3{font-size:1.1rem; margin-top:0.4rem;}
+  .cap-card p{margin-top:0.6rem; font-size:0.92rem;}
+
+  /* ---------- PROJECTS ---------- */
+  .project{
+    display:grid; grid-template-columns:1fr 1fr; gap:3rem;
+    padding:3rem 0; border-top:1px solid var(--border);
+    align-items:center;
+  }
+  .project:last-child{padding-bottom:0;}
+  @media (max-width:900px){ .project{grid-template-columns:1fr; gap:2rem;} }
+  .project.reverse .project-visual{order:2;}
+  @media (max-width:900px){ .project.reverse .project-visual{order:0;} }
+
+  .project-num{font-family:var(--font-mono); font-size:0.78rem; color:var(--accent);}
+  .project h3{font-size:1.55rem; margin-top:0.5rem;}
+  .project .lede{font-family:var(--font-display); font-weight:700; font-size:1.02rem; color:var(--text-dim); margin-top:0.35rem;}
+  .project .desc{margin-top:1rem; font-size:0.96rem; max-width:52ch;}
+
+  .stack{display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1.3rem;}
+  .stack span{
+    font-family:var(--font-mono); font-size:0.72rem; padding:0.32rem 0.65rem;
+    border:1px solid var(--border); border-radius:6px; color:var(--text-dim);
+  }
+  .feat-list{margin-top:1.1rem; display:flex; flex-direction:column; gap:0.45rem;}
+  .feat-list div{display:flex; gap:0.55rem; font-size:0.9rem; color:var(--text-dim);}
+  .feat-list div::before{content:'✓'; color:var(--accent-2); flex:none; font-weight:600;}
+
+  .project-visual{
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
+    padding:1.4rem; font-family:var(--font-mono); font-size:0.82rem;
+  }
+  .flow{display:flex; flex-direction:column; align-items:stretch; gap:0;}
+  .flow-step{
+    background:var(--bg-elevated-2); border:1px solid var(--border); border-radius:8px;
+    padding:0.6rem 0.9rem; text-align:center; color:var(--text-dim); font-size:0.78rem;
+  }
+  .flow-arrow{text-align:center; color:var(--text-faint); padding:0.15rem 0; font-size:0.8rem;}
+
+  .score-card{
+    display:flex; justify-content:space-between; align-items:center;
+    background:var(--bg-elevated-2); border:1px solid var(--border); border-radius:8px;
+    padding:0.55rem 0.85rem; margin-top:0.5rem; font-size:0.8rem;
+  }
+  .score-card .score{color:var(--accent-2); font-weight:500;}
+
+  .db-grid{display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem; margin-top:1rem;}
+  .db-grid div{display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-dim); border-bottom:1px dashed var(--border); padding-bottom:0.35rem;}
+  .db-grid div span:last-child{color:var(--accent-2);}
+
+  /* ---------- WORKFLOW ---------- */
+  .workflow-track{
+    display:grid; grid-template-columns:repeat(6, 1fr); gap:0.8rem; margin-top:2.8rem;
+  }
+  @media (max-width:900px){ .workflow-track{grid-template-columns:repeat(3, 1fr);} }
+  @media (max-width:560px){ .workflow-track{grid-template-columns:1fr 1fr;} }
+  .wf-step{
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px;
+    padding:1.1rem 0.9rem; text-align:center; position:relative;
+  }
+  .wf-step .n{font-family:var(--font-mono); font-size:0.7rem; color:var(--accent);}
+  .wf-step .label{font-family:var(--font-display); font-weight:700; font-size:0.86rem; margin-top:0.4rem; letter-spacing:0.02em;}
+  .workflow-note{margin-top:2rem; max-width:60ch; font-size:0.98rem;}
+
+  /* ---------- STACK ---------- */
+  .stack-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:2rem;}
+  @media (max-width:820px){ .stack-grid{grid-template-columns:repeat(2, 1fr);} }
+  .stack-group .eyebrow{margin-bottom:1rem;}
+  .stack-group ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.55rem;}
+  .stack-group li{font-family:var(--font-mono); font-size:0.88rem; color:var(--text);}
+
+  /* ---------- TIMELINE ---------- */
+  .timeline{position:relative; padding-left:2.2rem; margin-top:1rem;}
+  .timeline::before{content:''; position:absolute; left:6px; top:6px; bottom:6px; width:1px; background:var(--border);}
+  .tl-item{position:relative; padding-bottom:2.4rem;}
+  .tl-item:last-child{padding-bottom:0;}
+  .tl-item::before{
+    content:''; position:absolute; left:-2.2rem; top:0.3rem; width:11px; height:11px;
+    border-radius:50%; background:var(--bg); border:2px solid var(--accent);
+  }
+  .tl-item.now::before{background:var(--accent-2); border-color:var(--accent-2); box-shadow:0 0 0 4px var(--accent-2-soft);}
+  .tl-year{font-family:var(--font-mono); font-size:0.78rem; color:var(--accent);}
+  .tl-item h4{font-size:1.05rem; margin-top:0.3rem;}
+  .tl-item .role-list{margin-top:0.5rem; display:flex; flex-wrap:wrap; gap:0.5rem;}
+  .tl-item .role-list span{
+    font-size:0.8rem; color:var(--text-dim); background:var(--bg-elevated);
+    border:1px solid var(--border); padding:0.28rem 0.6rem; border-radius:6px;
+  }
+
+  /* ---------- STATS ---------- */
+  .stats-band{
+    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+    display:grid; grid-template-columns:repeat(4, 1fr);
+  }
+  @media (max-width:700px){ .stats-band{grid-template-columns:repeat(2, 1fr);} }
+  .stat-cell{
+    padding:2.6rem 1.5rem; text-align:center; border-right:1px solid var(--border);
+  }
+  .stat-cell:last-child{border-right:none;}
+  @media (max-width:700px){ .stat-cell:nth-child(2n){border-right:none;} .stat-cell{border-bottom:1px solid var(--border);} .stat-cell:nth-last-child(-n+2){border-bottom:none;} }
+  .stat-cell .big{font-family:var(--font-mono); font-weight:500; font-size:2.4rem; color:var(--text);}
+  .stat-cell .big span{color:var(--accent);}
+  .stat-cell .cap{margin-top:0.4rem; font-size:0.85rem; color:var(--text-dim);}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:3.5rem;}
+  @media (max-width:900px){ .about-grid{grid-template-columns:1fr; gap:2rem;} }
+  .about-grid h2{font-size:clamp(1.5rem,3vw,2rem);}
+  .about-grid .desc{margin-top:1.2rem; font-size:1rem; max-width:56ch;}
+  .about-grid .desc + .desc{margin-top:1rem;}
+  .interest-chips{display:flex; flex-wrap:wrap; gap:0.6rem; align-content:flex-start;}
+  .interest-chips span{
+    font-family:var(--font-mono); font-size:0.8rem; padding:0.5rem 0.9rem;
+    border:1px solid var(--border); border-radius:20px; color:var(--text-dim);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact{
+    background:radial-gradient(120% 160% at 20% 0%, rgba(79,140,255,0.10), transparent 55%), var(--bg-elevated);
+    border-radius:20px; padding:4rem 3rem; text-align:left;
+    border:1px solid var(--border);
+  }
+  @media (max-width:640px){ .contact{padding:2.8rem 1.6rem;} }
+  .contact h2{font-size:clamp(1.8rem,4vw,2.6rem); max-width:20ch;}
+  .contact p{margin-top:1rem; font-size:1.03rem; max-width:50ch;}
+  .contact-actions{display:flex; flex-wrap:wrap; gap:0.9rem; margin-top:2.2rem;}
+
+  footer{border-top:1px solid var(--border); padding:2.6rem 0;}
+  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;}
+  .footer-brand{font-family:var(--font-display); font-weight:800;}
+  .footer-tag{font-family:var(--font-mono); font-size:0.78rem; color:var(--text-faint); margin-top:0.3rem;}
+  .footer-links{display:flex; gap:1.5rem;}
+  .footer-links a{font-size:0.86rem; color:var(--text-dim);}
+  .footer-links a:hover{color:var(--accent);}
+
+  .reveal{opacity:1; transform:none;}
+  @media (prefers-reduced-motion: no-preference){
+    .reveal-init{opacity:0; transform:translateY(14px); transition:opacity 0.6s ease, transform 0.6s ease;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#" class="logo">TAREK BOUDMAGH</a>
+    <div class="nav-links">
+      <a href="#about">À propos</a>
+      <a href="#projects">Projets</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:0.8rem;">
+      <a class="btn btn-primary nav-cta" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV</a>
+      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+    </div>
+  </nav>
+  <div id="mobile-menu" hidden>
+    <a href="#about">À propos</a>
+    <a href="#projects">Projets</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#parcours">Parcours</a>
+    <a href="#contact">Contact</a>
+    <a href="cv/Tarek_Boudmagh_CV.pdf" download style="color:var(--accent);">Télécharger mon CV ↓</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap">
+    <div class="hero-grid">
+      <div>
+        <div class="name">Tarek Boudmagh</div>
+        <h1>Digital &amp; Data Specialist<br>Real Estate &amp; Investment | Webmaster</h1>
+        <p class="hero-lede">Je travaille à l'intersection de la donnée immobilière, du contenu digital, du SEO et de l'automatisation — pour transformer des informations complexes en outils et contenus utiles aux investisseurs.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+          <a href="cv/Tarek_Boudmagh_CV.pdf" download class="btn btn-ghost">Télécharger mon CV</a>
+        </div>
+        <div class="hero-tags">
+          <span>SCPI</span><span>Data</span><span>SEO</span><span>Automation</span><span>WordPress</span>
+        </div>
+      </div>
+
+      <div class="panel reveal-init" id="heroPanel">
+        <div class="panel-head">
+          <span class="panel-title">SCPI Data</span>
+          <span class="live-dot"><i></i>Live</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Rendement moyen</span>
+          <span class="stat-value up mono">6,12&nbsp;%</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Capitalisation suivie</span>
+          <span class="stat-value mono">4,8&nbsp;Md€</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">SCPI en base</span>
+          <span class="stat-value mono">125+</span>
+        </div>
+        <div class="bars" aria-hidden="true">
+          <i style="height:38%"></i><i style="height:62%"></i><i style="height:51%"></i>
+          <i style="height:74%"></i><i style="height:44%"></i><i style="height:83%"></i>
+          <i style="height:58%"></i><i style="height:67%"></i>
+        </div>
+        <div class="panel-foot"><i></i>Données mises à jour automatiquement</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="expertise">
+    <div class="section-head">
+      <span class="eyebrow">Ce que je fais</span>
+      <h2>Je transforme la donnée en information exploitable.</h2>
+      <p>Mon travail combine la gestion de données immobilières, la production de contenu, le SEO, le webmastering et l'automatisation. L'objectif est simple : fiabiliser l'information, réduire les tâches répétitives et améliorer l'expérience utilisateur.</p>
+    </div>
+    <div class="capabilities">
+      <div class="cap-card reveal-init">
+        <span class="cap-num">01</span>
+        <span class="cap-tag">Data</span>
+        <h3>Données immobilières</h3>
+        <p>Collecte, vérification, structuration et mise à jour de données liées aux SCPI et à l'investissement immobilier.</p>
+      </div>
+      <div class="cap-card reveal-init">
+        <span class="cap-num">02</span>
+        <span class="cap-tag">Content</span>
+        <h3>Content &amp; SEO</h3>
+        <p>Création et optimisation de contenus immobiliers destinés au référencement naturel et à l'information des investisseurs.</p>
+      </div>
+      <div class="cap-card reveal-init">
+        <span class="cap-num">03</span>
+        <span class="cap-tag">Automation</span>
+        <h3>Automatisation</h3>
+        <p>Développement d'outils permettant de surveiller automatiquement des sites, documents et données.</p>
+      </div>
+      <div class="cap-card reveal-init">
+        <span class="cap-num">04</span>
+        <span class="cap-tag">Digital</span>
+        <h3>WordPress &amp; Web</h3>
+        <p>Gestion éditoriale, intégration de contenus, optimisation et détection d'anomalies.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="projects">
+    <div class="section-head">
+      <span class="eyebrow">Projets</span>
+      <h2>Cinq outils, un même fil conducteur.</h2>
+      <p>De la collecte de données brutes à la publication de contenu, chaque projet répond à un besoin concret rencontré dans l'écosystème SCPI.</p>
+    </div>
+
+    <div class="project reveal-init">
+      <div>
+        <span class="project-num">Projet 01</span>
+        <h3>SCPI Monitoring</h3>
+        <p class="lede">Automatiser la veille documentaire des SCPI</p>
+        <p class="desc">Développement d'un système permettant de surveiller automatiquement les sites des sociétés de gestion afin d'identifier les nouveaux documents et informations disponibles.</p>
+        <div class="stack"><span>Python</span><span>Selenium</span><span>Playwright</span><span>PDF Automation</span></div>
+        <div class="feat-list">
+          <div>Surveillance de plusieurs sites</div>
+          <div>Détection des nouveaux PDF</div>
+          <div>Identification des bulletins</div>
+          <div>Détection des périodes T1/T2/T3/T4</div>
+          <div>Système de cache</div>
+          <div>Génération de rapports</div>
+        </div>
+      </div>
+      <div class="project-visual">
+        <div class="flow">
+          <div class="flow-step">Sites sociétés de gestion</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Crawler (Selenium / Playwright)</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Détection nouveaux PDF</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Comparaison avec cache</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step" style="border-color:var(--accent); color:var(--text);">Rapport généré</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project reverse reveal-init">
+      <div>
+        <span class="project-num">Projet 02</span>
+        <h3>Intelligent SCPI Comparator</h3>
+        <p class="lede">Un comparateur qui ne se contente pas de comparer</p>
+        <p class="desc">Conception d'une approche de comparaison intelligente des SCPI basée sur le profil de l'investisseur plutôt que sur une simple comparaison de performances.</p>
+        <div class="stack"><span>Data</span><span>Scoring</span><span>AI</span><span>UX</span><span>SCPI</span></div>
+      </div>
+      <div class="project-visual">
+        <div class="db-grid" style="grid-template-columns:1fr; margin-top:0;">
+          <div><span>Montant</span><span>50 000 €</span></div>
+          <div><span>Objectif</span><span>Revenus</span></div>
+          <div><span>Horizon</span><span>10 ans</span></div>
+          <div><span>Zone</span><span>Europe</span></div>
+          <div><span>Démembrement</span><span>Oui</span></div>
+        </div>
+        <div class="flow-arrow" style="margin-top:0.6rem;">↓ analyse du profil ↓</div>
+        <div class="score-card"><span>01 — SCPI A</span><span class="score">92/100</span></div>
+        <div class="score-card"><span>02 — SCPI B</span><span class="score">87/100</span></div>
+        <div class="score-card"><span>03 — SCPI C</span><span class="score">83/100</span></div>
+      </div>
+    </div>
+
+    <div class="project reveal-init">
+      <div>
+        <span class="project-num">Projet 03</span>
+        <h3>SCPI Data</h3>
+        <p class="lede">Une base de données immobilière structurée</p>
+        <p class="desc">Gestion et mise à jour de données relatives aux SCPI : prix de souscription, capitalisation, rendements, acquisitions, documents réglementaires, démembrement et indicateurs.</p>
+        <div class="stack"><span>Python</span><span>SQLite</span><span>Data Pipelines</span></div>
+      </div>
+      <div class="project-visual">
+        <div class="panel-title" style="margin-bottom:0.9rem;">SCPI DATABASE — 125+ SCPI</div>
+        <div class="db-grid">
+          <div><span>Prix</span><span>✓</span></div>
+          <div><span>Rendement</span><span>✓</span></div>
+          <div><span>Capitalisation</span><span>✓</span></div>
+          <div><span>Acquisitions</span><span>✓</span></div>
+          <div><span>Documents</span><span>✓</span></div>
+          <div><span>Démembrement</span><span>✓</span></div>
+        </div>
+        <div class="panel-foot" style="margin-top:1.1rem;"><i></i>Dernière mise à jour : <span class="mono" id="lastUpdate">08/09/2026</span></div>
+      </div>
+    </div>
+
+    <div class="project reverse reveal-init">
+      <div>
+        <span class="project-num">Projet 04</span>
+        <h3>SEO immobilier</h3>
+        <p class="lede">Transformer une donnée brute en contenu performant</p>
+        <p class="desc">Exemple concret : fiche programme immobilier → recherche de l'expression clé → structure H1/H2 → méta-description → données structurées → contenu enrichi → publication WordPress.</p>
+        <div class="stack"><span>WordPress</span><span>SEO</span><span>Google Search Console</span><span>Content</span></div>
+      </div>
+      <div class="project-visual">
+        <div class="flow">
+          <div class="flow-step">Données brutes</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Analyse du mot-clé</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Structure SEO (H1/H2)</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Rédaction &amp; optimisation</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step" style="border-color:var(--accent); color:var(--text);">Publication WordPress</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="project reveal-init">
+      <div>
+        <span class="project-num">Projet 05</span>
+        <h3>Forum SCPI</h3>
+        <p class="lede">Veille, contenu et animation communautaire</p>
+        <p class="desc">Identification des questions pertinentes et des nouvelles informations du marché immobilier afin de créer et enrichir des discussions utiles aux investisseurs.</p>
+        <div class="stack"><span>Veille</span><span>Content</span><span>Communauté</span></div>
+      </div>
+      <div class="project-visual">
+        <div class="flow">
+          <div class="flow-step">Veille</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Information pertinente</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Analyse</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step">Création du sujet</div>
+          <div class="flow-arrow">↓</div>
+          <div class="flow-step" style="border-color:var(--accent); color:var(--text);">Discussion accessible à la communauté</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Méthode</span>
+      <h2>De l'information à l'action.</h2>
+    </div>
+    <div class="workflow-track">
+      <div class="wf-step reveal-init"><div class="n">01</div><div class="label">Veille</div></div>
+      <div class="wf-step reveal-init"><div class="n">02</div><div class="label">Collecte</div></div>
+      <div class="wf-step reveal-init"><div class="n">03</div><div class="label">Vérification</div></div>
+      <div class="wf-step reveal-init"><div class="n">04</div><div class="label">Structuration</div></div>
+      <div class="wf-step reveal-init"><div class="n">05</div><div class="label">Automatisation</div></div>
+      <div class="wf-step reveal-init"><div class="n">06</div><div class="label">Publication</div></div>
+    </div>
+    <p class="workflow-note">Je combine veille humaine, vérification des sources et automatisation afin de maintenir une information fiable et exploitable.</p>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Stack</span>
+      <h2>Ce que je maîtrise réellement.</h2>
+    </div>
+    <div class="stack-grid">
+      <div class="stack-group reveal-init">
+        <span class="eyebrow" style="color:var(--text-faint);">Data &amp; Automation</span>
+        <ul><li>Python</li><li>Selenium</li><li>Playwright</li><li>Streamlit</li></ul>
+      </div>
+      <div class="stack-group reveal-init">
+        <span class="eyebrow" style="color:var(--text-faint);">Web</span>
+        <ul><li>WordPress</li><li>HTML</li><li>CSS</li><li>PHP</li></ul>
+      </div>
+      <div class="stack-group reveal-init">
+        <span class="eyebrow" style="color:var(--text-faint);">SEO &amp; Analytics</span>
+        <ul><li>Google Search Console</li><li>SEO On-page</li><li>Google Discover</li></ul>
+      </div>
+      <div class="stack-group reveal-init">
+        <span class="eyebrow" style="color:var(--text-faint);">AI</span>
+        <ul><li>LLM</li><li>Prompt Engineering</li><li>AI Automation</li></ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="parcours">
+    <div class="section-head">
+      <span class="eyebrow">Parcours</span>
+      <h2>Un fil conducteur, pas une succession de métiers.</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal-init">
+        <div class="tl-year">2021 – 2023</div>
+        <h4>Superviseur régional → Coordinateur national</h4>
+        <p style="margin-top:0.4rem; font-size:0.92rem;">Télécommunications — management de 6 superviseurs régionaux, coordination des opérations sur l'ensemble du territoire algérien.</p>
+        <div class="role-list"><span>Supervision télécom</span><span>Coordination de projets</span><span>Gestion d'équipes</span></div>
+      </div>
+      <div class="tl-item reveal-init">
+        <div class="tl-year">2024</div>
+        <h4>Data &amp; Content / Web Operations — Starty Media</h4>
+        <p style="margin-top:0.4rem; font-size:0.92rem;">Bascule vers l'écosystème SCPI : données, documents réglementaires, WordPress, SEO et premiers scripts d'automatisation.</p>
+        <div class="role-list"><span>Data SCPI</span><span>WordPress</span><span>SEO</span><span>Content</span><span>Automation</span></div>
+      </div>
+      <div class="tl-item now reveal-init">
+        <div class="tl-year">Aujourd'hui</div>
+        <h4>Data &amp; Content Specialist — Real Estate</h4>
+        <p style="margin-top:0.4rem; font-size:0.92rem;">Fortuny Conseil &amp; portail-scpi.fr — fiabilisation de la donnée, automatisation de la veille, outils internes.</p>
+        <div class="role-list"><span>Management → Digital → Data → Immobilier → Automatisation</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="stats-band">
+      <div class="stat-cell reveal-init"><div class="big"><span>125</span>+</div><div class="cap">SCPI suivies</div></div>
+      <div class="stat-cell reveal-init"><div class="big">5</div><div class="cap">domaines d'expertise</div></div>
+      <div class="stat-cell reveal-init"><div class="big"><span>10</span>+</div><div class="cap">outils &amp; automatisations développés</div></div>
+      <div class="stat-cell reveal-init"><div class="big">3</div><div class="cap">années d'expérience digital &amp; immobilier</div></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="about">
+    <div class="about-grid">
+      <div class="reveal-init">
+        <span class="eyebrow">À propos</span>
+        <h2>Je m'intéresse à ce qui se trouve entre la donnée et le produit.</h2>
+        <p class="desc">Mon parcours m'a progressivement amené vers un profil hybride combinant immobilier, data, contenu et technologie.</p>
+        <p class="desc">Aujourd'hui, je travaille principalement autour de la donnée immobilière et des plateformes digitales. Je m'intéresse particulièrement à l'automatisation des tâches répétitives, à la fiabilisation des informations et à la création d'outils permettant de mieux exploiter la donnée.</p>
+        <p class="desc">Depuis 2024, je gère la donnée SCPI et les opérations digitales chez <strong style="color:var(--text);">Starty Media</strong>, sur les plateformes Fortuny Conseil et portail-scpi.fr : contrôle documentaire, suivi des souscriptions, administration éditoriale WordPress et automatisation des contrôles.</p>
+      </div>
+      <div class="interest-chips reveal-init" style="align-content:start;">
+        <span>Data</span><span>Automation</span><span>Real Estate</span><span>AI</span><span>SEO</span><span>Digital products</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <div class="contact reveal-init">
+      <span class="eyebrow">Contact</span>
+      <h2>Vous avez un projet ?</h2>
+      <p>Data immobilière, automatisation, contenu digital ou optimisation d'une plateforme : discutons-en.</p>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="mailto:Boudmaghtrk@gmail.com">Email</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn btn-ghost" href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="footer-row">
+    <div>
+      <div class="footer-brand">TAREK BOUDMAGH</div>
+      <div class="footer-tag">Data · Real Estate · Automation · Content</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:Boudmaghtrk@gmail.com">Email</a>
+    </div>
+  </div>
+  <div class="footer-tag" style="margin-top:1.4rem;">© 2026 Tarek Boudmagh</div>
+</footer>
+
+<script>
+  (function(){
+    var burger = document.getElementById('burgerBtn');
+    var menu = document.getElementById('mobile-menu');
+    burger.addEventListener('click', function(){
+      var isHidden = menu.hasAttribute('hidden');
+      if(isHidden){ menu.removeAttribute('hidden'); burger.setAttribute('aria-expanded','true'); }
+      else { menu.setAttribute('hidden',''); burger.setAttribute('aria-expanded','false'); }
+    });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ menu.setAttribute('hidden',''); burger.setAttribute('aria-expanded','false'); });
+    });
+
+    if('IntersectionObserver' in window){
+      var els = document.querySelectorAll('.reveal-init');
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){ e.target.classList.add('reveal'); io.unobserve(e.target); }
+        });
+      }, {threshold:0.12});
+      els.forEach(function(el){ io.observe(el); });
+    } else {
+      document.querySelectorAll('.reveal-init').forEach(function(el){ el.classList.add('reveal'); });
+    }
+  })();
+</script>
+</body>
+</html>
