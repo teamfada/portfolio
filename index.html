@@ -308,6 +308,11 @@
   @media (max-width:640px){ .contact{padding:2.8rem 1.6rem;} }
   .contact h2{font-size:clamp(1.8rem,4vw,2.6rem); max-width:20ch;}
   .contact p{margin-top:1rem; font-size:1.03rem; max-width:50ch;}
+  .contact-info{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; margin-top:1.6rem;}
+  .contact-info span{display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; color:var(--text-dim);}
+  .contact-info a{color:var(--text-dim); transition:color 0.15s;}
+  .contact-info a:hover{color:var(--accent);}
+  .ci-dot{width:5px; height:5px; border-radius:50%; background:var(--accent); flex:none;}
   .contact-actions{display:flex; flex-wrap:wrap; gap:0.9rem; margin-top:2.2rem;}
 
   footer{border-top:1px solid var(--border); padding:2.6rem 0;}
@@ -355,7 +360,7 @@
   <section class="hero wrap">
     <div class="hero-grid">
       <div>
-        <div class="name">Tarek Boudmagh</div>
+        <div class="name">Tarek Boudmagh · Tizi Ouzou, Algérie</div>
         <h1>Digital &amp; Data Specialist<br>Real Estate &amp; Investment | Webmaster</h1>
         <p class="hero-lede">Je travaille à l'intersection de la donnée immobilière, du contenu digital, du SEO et de l'automatisation — pour transformer des informations complexes en outils et contenus utiles aux investisseurs.</p>
         <div class="hero-actions">
@@ -655,8 +660,14 @@
       <span class="eyebrow">Contact</span>
       <h2>Vous avez un projet ?</h2>
       <p>Data immobilière, automatisation, contenu digital ou optimisation d'une plateforme : discutons-en.</p>
+      <div class="contact-info">
+        <span><i class="ci-dot"></i>Tizi Ouzou, Algérie</span>
+        <span><i class="ci-dot"></i><a href="tel:+213551233332" class="mono">+213 551 23 33 32</a></span>
+        <span><i class="ci-dot"></i><a href="mailto:Boudmaghtrk@gmail.com" class="mono">Boudmaghtrk@gmail.com</a></span>
+      </div>
       <div class="contact-actions">
         <a class="btn btn-primary" href="mailto:Boudmaghtrk@gmail.com">Email</a>
+        <a class="btn btn-ghost" href="tel:+213551233332">Appeler</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a>
         <a class="btn btn-ghost" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV</a>
