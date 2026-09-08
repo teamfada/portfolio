@@ -188,6 +188,25 @@
   .cap-card h3{font-size:1.1rem; margin-top:0.4rem;}
   .cap-card p{margin-top:0.6rem; font-size:0.92rem;}
 
+  /* ---------- MISSIONS ---------- */
+  .missions-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:1rem;}
+  @media (max-width:820px){ .missions-grid{grid-template-columns:1fr;} }
+  .mission-card{
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
+    padding:1.4rem 1.5rem; transition:border-color 0.2s;
+  }
+  .mission-card:hover{border-color:var(--accent);}
+  .mission-card h3{font-size:1rem; font-weight:700;}
+  .mission-card p{margin-top:0.6rem; font-size:0.9rem;}
+  .mission-tags{display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;}
+  .mission-tags span{
+    font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.04em;
+    padding:0.3rem 0.6rem; border-radius:6px; text-transform:uppercase;
+  }
+  .mission-tags .freq{background:var(--accent-soft); color:var(--accent);}
+  .mission-tags .load{background:var(--accent-2-soft); color:var(--accent-2);}
+  .mission-tags .load.high{background:rgba(245,158,11,0.12); color:#f5a524;}
+
   /* ---------- PROJECTS ---------- */
   .project{
     display:grid; grid-template-columns:1fr 1fr; gap:3rem;
@@ -338,8 +357,9 @@
     <a href="#" class="logo">TAREK BOUDMAGH</a>
     <div class="nav-links">
       <a href="#about">À propos</a>
-      <a href="#projects">Projets</a>
       <a href="#expertise">Expertise</a>
+      <a href="#missions">Quotidien</a>
+      <a href="#projects">Projets</a>
       <a href="#parcours">Parcours</a>
       <a href="#contact">Contact</a>
     </div>
@@ -411,14 +431,14 @@
       <div class="cap-card reveal-init">
         <span class="cap-num">01</span>
         <span class="cap-tag">Data</span>
-        <h3>Données immobilières</h3>
-        <p>Collecte, vérification, structuration et mise à jour de données liées aux SCPI et à l'investissement immobilier.</p>
+        <h3>Veille &amp; données SCPI</h3>
+        <p>Surveillance quotidienne des sociétés de gestion, collecte des acquisitions et intégration dans Access et Démembrement.fr.</p>
       </div>
       <div class="cap-card reveal-init">
         <span class="cap-num">02</span>
         <span class="cap-tag">Content</span>
-        <h3>Content &amp; SEO</h3>
-        <p>Création et optimisation de contenus immobiliers destinés au référencement naturel et à l'information des investisseurs.</p>
+        <h3>Content, SEO &amp; forum</h3>
+        <p>Création de contenus immobiliers optimisés SEO et animation du forum Portail-SCPI.fr à partir de la veille quotidienne.</p>
       </div>
       <div class="cap-card reveal-init">
         <span class="cap-num">03</span>
@@ -429,8 +449,58 @@
       <div class="cap-card reveal-init">
         <span class="cap-num">04</span>
         <span class="cap-tag">Digital</span>
-        <h3>WordPress &amp; Web</h3>
-        <p>Gestion éditoriale, intégration de contenus, optimisation et détection d'anomalies.</p>
+        <h3>WordPress, support &amp; QA</h3>
+        <p>Gestion éditoriale WordPress, assistance informatique aux équipes et remontée des anomalies aux développeurs.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap" id="missions">
+    <div class="section-head">
+      <span class="eyebrow">Quotidien</span>
+      <h2>Le quotidien derrière les outils.</h2>
+      <p>Au-delà des projets, une charge opérationnelle continue : la donnée SCPI ne s'arrête jamais, et une bonne partie de mon travail consiste à la maintenir fiable en temps réel.</p>
+    </div>
+    <div class="missions-grid">
+      <div class="mission-card reveal-init">
+        <h3>Veille &amp; collecte des informations SCPI</h3>
+        <p>Suivi quotidien des mails et actualités des sociétés de gestion dès l'ouverture du bureau, recherche de nouveaux documents, identification des données à mettre à jour.</p>
+        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load">Continu</span></div>
+      </div>
+      <div class="mission-card reveal-init">
+        <h3>Intégration des acquisitions — Access</h3>
+        <p>Recherche des nouvelles acquisitions annoncées par les SCPI, vérification, collecte des données et intégration dans la base Access, avec contrôle et mise à jour au fil de l'actualité.</p>
+        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load high">Charge très importante</span></div>
+      </div>
+      <div class="mission-card reveal-init">
+        <h3>Intégration des acquisitions — Démembrement.fr</h3>
+        <p>Même processus de veille, vérification et contrôle, appliqué à l'intégration des acquisitions sur la plateforme Démembrement.fr.</p>
+        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load high">Charge très importante</span></div>
+      </div>
+      <div class="mission-card reveal-init">
+        <h3>Animation du forum Portail-SCPI.fr</h3>
+        <p>Surveillance des questions publiées, identification des sujets pertinents, transformation de la veille SCPI en fils de discussion et suivi des échanges.</p>
+        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load">Variable</span></div>
+      </div>
+      <div class="mission-card reveal-init">
+        <h3>Assistance informatique aux équipes</h3>
+        <p>Support aux collègues bloqués sur un outil ou une plateforme : diagnostic du problème, résolution ou accompagnement selon la complexité.</p>
+        <div class="mission-tags"><span class="freq">À la demande</span><span class="load">Variable</span></div>
+      </div>
+      <div class="mission-card reveal-init">
+        <h3>Détection d'anomalies &amp; suivi DEV</h3>
+        <p>Identification des bugs et dysfonctionnements sur les plateformes, vérification avant transmission au développeur, suivi jusqu'à correction et validation.</p>
+        <div class="mission-tags"><span class="freq">Continu</span><span class="load">Variable</span></div>
+      </div>
+      <div class="mission-card reveal-init">
+        <h3>Formations &amp; interviews sociétés de gestion</h3>
+        <p>Participation aux formations et échanges avec les sociétés de gestion pour approfondir la maîtrise des produits SCPI et fiabiliser le travail quotidien.</p>
+        <div class="mission-tags"><span class="freq">Ponctuel</span><span class="load">Importante</span></div>
+      </div>
+      <div class="mission-card reveal-init">
+        <h3>Suivi du pointage des équipes</h3>
+        <p>Relevé et vérification quotidienne des horaires d'entrée et de sortie des employés.</p>
+        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load">Faible</span></div>
       </div>
     </div>
   </section>
