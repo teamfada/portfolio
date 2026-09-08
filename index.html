@@ -112,6 +112,8 @@
     display:flex; flex-direction:column; gap:0.2rem; padding:0.5rem 1.25rem 1.25rem;
     border-bottom:1px solid var(--border); background:var(--bg);
   }
+  #mobile-menu[hidden]{display:none;}
+  @media (min-width:820px){ #mobile-menu{display:none !important;} }
   #mobile-menu a{padding:0.7rem 0; color:var(--text-dim); font-size:0.95rem; border-bottom:1px solid var(--border);}
   #mobile-menu a:last-child{border-bottom:none;}
 
