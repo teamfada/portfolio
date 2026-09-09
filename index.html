@@ -353,7 +353,7 @@
 
   .reveal{opacity:1; transform:none;}
   @media (prefers-reduced-motion: no-preference){
-    .reveal-init{opacity:0; transform:translateY(14px); transition:opacity 0.6s ease, transform 0.6s ease;}
+    .reveal-init{opacity:0; transform:translateY(8px); transition:opacity 0.5s ease, transform 0.5s ease;}
   }
 </style>
 </head>
@@ -787,7 +787,7 @@
         entries.forEach(function(e){
           if(e.isIntersecting){ e.target.classList.add('reveal'); io.unobserve(e.target); }
         });
-      }, {threshold:0.12});
+      }, {threshold:0.01, rootMargin:'0px 0px -40px 0px'});
       els.forEach(function(el){ io.observe(el); });
     } else {
       document.querySelectorAll('.reveal-init').forEach(function(el){ el.classList.add('reveal'); });
