@@ -201,24 +201,21 @@
   .cap-card p{margin-top:0.6rem; font-size:0.92rem;}
 
   /* ---------- MISSIONS ---------- */
-  .missions-grid{display:grid; grid-template-columns:repeat(2, 1fr); gap:1rem;}
-  @media (max-width:820px){ .missions-grid{grid-template-columns:1fr;} }
+  .missions-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.2rem;}
+  @media (max-width:900px){ .missions-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media (max-width:560px){ .missions-grid{grid-template-columns:1fr;} }
   .mission-card{
     background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
-    padding:1.4rem 1.5rem; transition:border-color 0.2s;
+    padding:1.6rem 1.5rem; transition:border-color 0.2s, transform 0.2s;
   }
-  .mission-card:hover{border-color:var(--accent);}
-  .mission-card h3{font-size:1rem; font-weight:700;}
-  .mission-card p{margin-top:0.6rem; font-size:0.9rem;}
-  .mission-tags{display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:1rem;}
-  .mission-tags span{
-    font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.04em;
-    padding:0.3rem 0.6rem; border-radius:6px; text-transform:uppercase;
+  .mission-card:hover{border-color:var(--accent); transform:translateY(-3px);}
+  .mission-icon{
+    width:38px; height:38px; border-radius:10px; background:var(--accent-soft);
+    color:var(--accent); display:flex; align-items:center; justify-content:center;
   }
-  .mission-tags .freq{background:var(--accent-soft); color:var(--accent);}
-  .mission-tags .load{background:var(--accent-2-soft); color:var(--accent-2);}
-  .mission-tags .load.high{background:rgba(245,158,11,0.12); color:#f5a524;}
-  .mission-tags .cert{background:rgba(168,139,250,0.14); color:#a88bfa;}
+  .mission-icon svg{width:19px; height:19px;}
+  .mission-card h3{font-size:1rem; font-weight:700; margin-top:1rem;}
+  .mission-card p{margin-top:0.5rem; font-size:0.88rem;}
 
   /* ---------- PROJECTS ---------- */
   .project{
@@ -482,39 +479,51 @@
   <section class="wrap" id="missions">
     <div class="section-head">
       <span class="eyebrow">Quotidien</span>
-      <h2>Le quotidien derrière les outils.</h2>
-      <p>Au-delà des projets, une charge opérationnelle continue : la donnée SCPI ne s'arrête jamais, et une bonne partie de mon travail consiste à la maintenir fiable en temps réel.</p>
+      <h2>Mes missions au quotidien.</h2>
+      <p>Une vue d'ensemble de mon rôle — le détail des outils, méthodes et réalisations se trouve dans la section Projets.</p>
     </div>
     <div class="missions-grid">
       <div class="mission-card reveal-init">
-        <h3>Veille &amp; collecte des informations SCPI</h3>
-        <p>Suivi quotidien des mails et actualités des sociétés de gestion dès l'ouverture du bureau, recherche de nouveaux documents, identification des données à mettre à jour.</p>
-        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load">Continu</span></div>
+        <div class="mission-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </div>
+        <h3>Data immobilière</h3>
+        <p>Veille, collecte, vérification et mise à jour des données SCPI.</p>
       </div>
       <div class="mission-card reveal-init">
-        <h3>Intégration des acquisitions dans la BDD</h3>
-        <p>Recherche des nouvelles acquisitions annoncées par les sociétés de gestion, vérification et collecte des informations, intégration des données dans la base de données, puis contrôle et mise à jour régulière en fonction de l'actualité.</p>
-        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load high">Charge très importante</span></div>
+        <div class="mission-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+        </div>
+        <h3>Documentation</h3>
+        <p>Suivi des bulletins, rapports annuels, documents réglementaires et publications des sociétés de gestion.</p>
       </div>
       <div class="mission-card reveal-init">
-        <h3>Fiches des programmes immobiliers</h3>
-        <p>Même processus de veille, de vérification et de contrôle appliqué à l'intégration des programmes immobiliers (Démembrement, Défiscalisation, MNLP) sur la plateforme Démembrement.fr.</p>
-        <div class="mission-tags"><span class="freq">Quotidien</span><span class="load high">Charge très importante</span></div>
+        <div class="mission-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
+        </div>
+        <h3>Acquisitions</h3>
+        <p>Recherche, vérification et intégration des acquisitions immobilières.</p>
       </div>
       <div class="mission-card reveal-init">
-        <h3>Assistance technique</h3>
-        <p>Accompagnement des collaborateurs dans l'utilisation des outils et plateformes : diagnostic des incidents, résolution des problèmes et assistance adaptée au niveau de complexité.</p>
-        <div class="mission-tags"><span class="freq">À la demande</span><span class="load">Variable</span></div>
+        <div class="mission-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>
+        </div>
+        <h3>Web &amp; SEO</h3>
+        <p>Gestion de sites WordPress, création de contenus, optimisation SEO et publication.</p>
       </div>
       <div class="mission-card reveal-init">
-        <h3>Détection d'anomalies &amp; suivi DEV</h3>
-        <p>Identification des bugs et dysfonctionnements sur les plateformes, vérification avant transmission au développeur, suivi jusqu'à correction et validation.</p>
-        <div class="mission-tags"><span class="freq">Continu</span><span class="load">Variable</span></div>
+        <div class="mission-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
+        </div>
+        <h3>QA &amp; support</h3>
+        <p>Détection des anomalies, reproduction des bugs et suivi avec les développeurs.</p>
       </div>
       <div class="mission-card reveal-init">
-        <h3>Formation &amp; Apprentissage</h3>
-        <p>Participation aux formations et échanges avec les différents acteurs de l'épargne en France pour approfondir la maîtrise des produits d'investissement et fiabiliser le travail quotidien. Plusieurs certifications de validation carte T obtenues suite à ces formations.</p>
-        <div class="mission-tags"><span class="freq">Ponctuel</span><span class="load">Importante</span><span class="cert">Certifiant — Carte T</span></div>
+        <div class="mission-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M12 10V4M4 20h4M4 14h4M4 8h4M16 20h4M16 12h4M16 6h4"/></svg>
+        </div>
+        <h3>Automatisation</h3>
+        <p>Développement de scripts et d'outils pour réduire les tâches répétitives et fiabiliser les contrôles.</p>
       </div>
     </div>
   </section>
