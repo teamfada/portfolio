@@ -290,12 +290,28 @@
   .workflow-note{margin-top:2rem; max-width:60ch; font-size:0.98rem;}
 
   /* ---------- STACK ---------- */
-  .stack-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:2rem 1.8rem;}
+  .stack-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.2rem;}
   @media (max-width:900px){ .stack-grid{grid-template-columns:repeat(2, 1fr);} }
   @media (max-width:560px){ .stack-grid{grid-template-columns:1fr;} }
+  .stack-group{
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
+    padding:1.5rem 1.4rem;
+  }
   .stack-group .eyebrow{margin-bottom:1rem;}
-  .stack-group ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:0.55rem;}
-  .stack-group li{font-family:var(--font-mono); font-size:0.88rem; color:var(--text);}
+  .skill-levels{display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.1rem;}
+  .skill-level{display:flex; align-items:center; justify-content:space-between; gap:0.8rem;}
+  .skill-level .name{font-size:0.9rem; color:var(--text); font-weight:500;}
+  .skill-level .level{
+    font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.03em;
+    color:var(--accent); background:var(--accent-soft); padding:0.22rem 0.55rem;
+    border-radius:5px; white-space:nowrap; flex:none;
+  }
+  .skill-tags{display:flex; flex-wrap:wrap; gap:0.5rem; padding-top:1rem; border-top:1px solid var(--border);}
+  .skill-tags span{
+    font-family:var(--font-mono); font-size:0.76rem; color:var(--text-dim);
+    background:var(--bg-elevated-2); border:1px solid var(--border);
+    padding:0.32rem 0.65rem; border-radius:6px;
+  }
 
   /* ---------- TIMELINE ---------- */
   .timeline{position:relative; padding-left:2.2rem; margin-top:1rem;}
@@ -752,6 +768,20 @@
     </div>
   </section>
 
+  <section class="wrap" id="resultats">
+    <div class="section-head">
+      <span class="eyebrow">Résultats</span>
+      <h2>Quelques chiffres.</h2>
+      <p>Des repères concrets sur mon expérience — rien qui ne puisse être justifié.</p>
+    </div>
+    <div class="stats-band">
+      <div class="stat-cell reveal-init"><div class="big"><span>125</span>+</div><div class="cap">SCPI suivies</div></div>
+      <div class="stat-cell reveal-init"><div class="big">5</div><div class="cap">domaines d'expertise</div></div>
+      <div class="stat-cell reveal-init"><div class="big"><span>10</span>+</div><div class="cap">outils &amp; automatisations développés</div></div>
+      <div class="stat-cell reveal-init"><div class="big mono" style="font-size:1.6rem;">2024 → auj.</div><div class="cap">Spécialisation Real Estate &amp; Data</div></div>
+    </div>
+  </section>
+
   <section class="wrap">
     <div class="section-head">
       <span class="eyebrow">Méthode</span>
@@ -772,28 +802,60 @@
     <div class="section-head">
       <span class="eyebrow">Compétences</span>
       <h2>Ce que je maîtrise réellement.</h2>
-      <p>Cinq domaines complémentaires, tous ancrés dans l'écosystème immobilier et SCPI.</p>
+      <p>Data → Automatisation → Immobilier → Web → SEO → IA : des piliers complémentaires, tous ancrés dans l'écosystème SCPI.</p>
     </div>
     <div class="stack-grid">
       <div class="stack-group reveal-init">
+        <span class="eyebrow" style="color:var(--text-faint);">Data &amp; Automation</span>
+        <div class="skill-levels">
+          <div class="skill-level"><span class="name">Python</span><span class="level">Intermédiaire</span></div>
+          <div class="skill-level"><span class="name">Selenium</span><span class="level">Intermédiaire</span></div>
+        </div>
+        <div class="skill-tags">
+          <span>Playwright</span><span>Streamlit</span><span>SQLite</span><span>Web scraping</span><span>Data cleaning</span><span>Data monitoring</span>
+        </div>
+      </div>
+      <div class="stack-group reveal-init">
+        <span class="eyebrow" style="color:var(--text-faint);">Web</span>
+        <div class="skill-levels">
+          <div class="skill-level"><span class="name">WordPress</span><span class="level">Avancé</span></div>
+        </div>
+        <div class="skill-tags">
+          <span>Administration de sites</span><span>Gestion de contenu</span><span>Maintenance éditoriale</span>
+        </div>
+      </div>
+      <div class="stack-group reveal-init">
+        <span class="eyebrow" style="color:var(--text-faint);">SEO &amp; Analytics</span>
+        <div class="skill-levels">
+          <div class="skill-level"><span class="name">SEO on-page</span><span class="level">Avancé</span></div>
+        </div>
+        <div class="skill-tags">
+          <span>Google Search Console</span><span>Google Analytics</span><span>Google Discover</span><span>Recherche de mots-clés</span><span>Structuration Hn</span><span>Métadonnées</span>
+        </div>
+      </div>
+      <div class="stack-group reveal-init">
         <span class="eyebrow" style="color:var(--text-faint);">Data &amp; Immobilier</span>
-        <ul><li>Data immobilière</li><li>SCPI</li><li>Veille documentaire</li><li>Contrôle &amp; vérification des données</li><li>Analyse de données</li></ul>
+        <div class="skill-levels">
+          <div class="skill-level"><span class="name">Data SCPI</span><span class="level">Avancé</span></div>
+        </div>
+        <div class="skill-tags">
+          <span>Veille documentaire</span><span>Contrôle &amp; vérification des données</span><span>Analyse de données</span>
+        </div>
       </div>
       <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Web &amp; CMS</span>
-        <ul><li>WordPress</li><li>Administration de sites</li><li>Gestion éditoriale</li></ul>
-      </div>
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">SEO &amp; Content</span>
-        <ul><li>SEO on-page</li><li>Création de contenus</li><li>Google Search Console</li><li>Google Analytics</li><li>Modération &amp; animation de communautés</li></ul>
-      </div>
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Automatisation &amp; IA</span>
-        <ul><li>Python</li><li>Selenium</li><li>Playwright</li><li>Automatisation de tâches</li><li>Outils IA</li><li>Développement d'outils internes</li></ul>
+        <span class="eyebrow" style="color:var(--text-faint);">IA</span>
+        <div class="skill-levels">
+          <div class="skill-level"><span class="name">Prompt Engineering</span><span class="level">Intermédiaire</span></div>
+        </div>
+        <div class="skill-tags">
+          <span>LLM</span><span>AI Automation</span><span>Extraction &amp; structuration de données</span><span>Génération de contenu assistée</span>
+        </div>
       </div>
       <div class="stack-group reveal-init">
         <span class="eyebrow" style="color:var(--text-faint);">Support &amp; Coordination</span>
-        <ul><li>Assistance technique</li><li>Diagnostic d'anomalies</li><li>Remontée de bugs</li><li>Coordination avec les développeurs</li></ul>
+        <div class="skill-tags" style="border-top:none; padding-top:0;">
+          <span>Assistance technique</span><span>Diagnostic d'anomalies</span><span>Remontée de bugs</span><span>Coordination avec les développeurs</span>
+        </div>
       </div>
     </div>
   </section>
@@ -832,15 +894,6 @@
         <p style="margin-top:0.4rem; font-size:0.92rem;">Fortuny Conseil &amp; portail-scpi.fr — fiabilisation de la donnée, automatisation de la veille, outils internes.</p>
         <div class="role-list"><span>Management → Digital → Data → Immobilier → Automatisation</span></div>
       </div>
-    </div>
-  </section>
-
-  <section class="wrap">
-    <div class="stats-band">
-      <div class="stat-cell reveal-init"><div class="big"><span>125</span>+</div><div class="cap">SCPI suivies</div></div>
-      <div class="stat-cell reveal-init"><div class="big">5</div><div class="cap">domaines d'expertise</div></div>
-      <div class="stat-cell reveal-init"><div class="big"><span>10</span>+</div><div class="cap">outils &amp; automatisations développés</div></div>
-      <div class="stat-cell reveal-init"><div class="big">3</div><div class="cap">années d'expérience digital &amp; immobilier</div></div>
     </div>
   </section>
 
