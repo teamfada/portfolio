@@ -266,6 +266,23 @@
   }
   .panel-foot i{width:6px; height:6px; border-radius:50%; background:var(--accent-2); flex:none;}
 
+  .portrait-frame{
+    background:linear-gradient(180deg, var(--bg-elevated), var(--bg-elevated-2));
+    border:1px solid var(--border); border-radius:16px;
+    padding:0.6rem 0.6rem 1.1rem;
+    box-shadow:var(--card-shadow);
+  }
+  .portrait-frame img{
+    display:block; width:100%; height:auto; border-radius:11px;
+    aspect-ratio:700/931; object-fit:cover;
+  }
+  .portrait-caption{
+    display:flex; align-items:center; justify-content:center;
+    margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border);
+  }
+  .portrait-caption .live-dot{font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint);}
+  .portrait-caption .live-dot i{background:var(--accent-2);}
+
   /* ---------- SECTION HEAD ---------- */
   .section-head{max-width:640px; margin-bottom:3rem;}
   .section-head h2{font-size:clamp(1.6rem, 3vw, 2.2rem); margin-top:0.7rem;}
@@ -532,29 +549,11 @@
         </div>
       </div>
 
-      <div class="panel reveal-init" id="heroPanel">
-        <div class="panel-head">
-          <span class="panel-title">SCPI Data</span>
-          <span class="live-dot"><i></i>Live</span>
+      <div class="portrait-frame reveal-init" id="heroPanel">
+        <img src="img/tarek-boudmagh.jpg" alt="Portrait de Tarek Boudmagh" width="700" height="931" loading="eager">
+        <div class="portrait-caption">
+          <span class="live-dot"><i></i>Disponible pour de nouvelles opportunités</span>
         </div>
-        <div class="stat-row">
-          <span class="stat-label">Rendement moyen</span>
-          <span class="stat-value up mono">6,12&nbsp;%</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">Capitalisation suivie</span>
-          <span class="stat-value mono">4,8&nbsp;Md€</span>
-        </div>
-        <div class="stat-row">
-          <span class="stat-label">SCPI en base</span>
-          <span class="stat-value mono">125+</span>
-        </div>
-        <div class="bars" aria-hidden="true">
-          <i style="height:38%"></i><i style="height:62%"></i><i style="height:51%"></i>
-          <i style="height:74%"></i><i style="height:44%"></i><i style="height:83%"></i>
-          <i style="height:58%"></i><i style="height:67%"></i>
-        </div>
-        <div class="panel-foot"><i></i>Données mises à jour automatiquement</div>
       </div>
     </div>
   </section>
