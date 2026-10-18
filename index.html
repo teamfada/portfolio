@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tarek Boudmagh — Data & Digital Specialist | Real Estate, SEO & Automation</title>
-<meta name="description" content="Portfolio de Tarek Boudmagh, Data & Digital Specialist spécialisé dans la donnée immobilière, le SEO, WordPress et l'automatisation.">
+<title>Tarek Boudmagh — Spécialiste data &amp; digital | Immobilier, SEO et automatisation</title>
+<meta name="description" content="Portfolio de Tarek Boudmagh, spécialiste data et digital : donnée immobilière (SCPI), SEO, WordPress et automatisation.">
 <link rel="canonical" href="https://teamfada.github.io/portfolio/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Tarek Boudmagh — Data & Digital Specialist | Real Estate, SEO & Automation">
-<meta property="og:description" content="Portfolio de Tarek Boudmagh, Data & Digital Specialist spécialisé dans la donnée immobilière, le SEO, WordPress et l'automatisation.">
+<meta property="og:title" content="Tarek Boudmagh — Spécialiste data &amp; digital | Immobilier, SEO et automatisation">
+<meta property="og:description" content="Portfolio de Tarek Boudmagh, spécialiste data et digital : donnée immobilière (SCPI), SEO, WordPress et automatisation.">
 <meta property="og:url" content="https://teamfada.github.io/portfolio/">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary">
@@ -21,8 +21,8 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Tarek Boudmagh",
-  "jobTitle": "Data & Digital Specialist",
-  "description": "Data & Digital Specialist spécialisé dans la donnée immobilière, le SEO, WordPress et l'automatisation (écosystème SCPI).",
+  "jobTitle": "Spécialiste data & digital — Immobilier et investissement",
+  "description": "Spécialiste data et digital : donnée immobilière (SCPI), SEO, WordPress et automatisation.",
   "url": "https://teamfada.github.io/portfolio/",
   "email": "mailto:Boudmaghtrk@gmail.com",
   "address": {
@@ -288,20 +288,6 @@
   .section-head h2{font-size:clamp(1.6rem, 3vw, 2.2rem); margin-top:0.7rem;}
   .section-head p{margin-top:1rem; font-size:1.02rem;}
 
-  /* ---------- WHAT I DO ---------- */
-  .capabilities{display:grid; grid-template-columns:repeat(4, 1fr); gap:1.1rem;}
-  @media (max-width:900px){ .capabilities{grid-template-columns:repeat(2, 1fr);} }
-  @media (max-width:560px){ .capabilities{grid-template-columns:1fr;} }
-  .cap-card{
-    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
-    padding:1.6rem 1.4rem; transition:border-color 0.2s, transform 0.2s;
-  }
-  .cap-card:hover{border-color:var(--accent); transform:translateY(-3px);}
-  .cap-num{font-family:var(--font-mono); font-size:0.75rem; color:var(--text-faint);}
-  .cap-tag{font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.1em; color:var(--accent); text-transform:uppercase; margin-top:0.8rem; display:block;}
-  .cap-card h3{font-size:1.1rem; margin-top:0.4rem;}
-  .cap-card p{margin-top:0.6rem; font-size:0.92rem;}
-
   /* ---------- MISSIONS ---------- */
   .missions-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.2rem;}
   @media (max-width:900px){ .missions-grid{grid-template-columns:repeat(2, 1fr);} }
@@ -328,6 +314,8 @@
   .project:last-child{padding-bottom:0;}
   @media (max-width:900px){ .project{grid-template-columns:1fr; gap:2rem;} }
   .project.reverse .project-visual{order:2;}
+  .project.solo{grid-template-columns:1fr;}
+  .project.solo .case-block p, .project.solo > div > p{max-width:70ch;}
   @media (max-width:900px){ .project.reverse .project-visual{order:0;} }
 
   .project-num{font-family:var(--font-mono); font-size:0.78rem; color:var(--accent);}
@@ -347,6 +335,10 @@
   .case-block.result p{color:var(--text);}
   .repo-note{margin-top:1.1rem; font-size:0.78rem; color:var(--text-faint);}
   .repo-note a{color:var(--accent); text-decoration:underline; text-underline-offset:2px;}
+  .demo-badge{
+    display:inline-block; margin-bottom:1rem; padding:0.3rem 0.65rem; border-radius:6px;
+    border:1px solid var(--accent); color:var(--accent); font-size:0.74rem; letter-spacing:0.04em;
+  }
 
   .stack{display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.2rem;}
   .stack span{
@@ -389,8 +381,7 @@
     background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px;
     padding:1.1rem 0.9rem; text-align:center; position:relative;
   }
-  .wf-step .n{font-family:var(--font-mono); font-size:0.7rem; color:var(--accent);}
-  .wf-step .label{font-family:var(--font-display); font-weight:700; font-size:0.86rem; margin-top:0.4rem; letter-spacing:0.02em;}
+  .wf-step .label{font-family:var(--font-display); font-weight:700; font-size:0.86rem; letter-spacing:0.02em;}
   .workflow-note{margin-top:2rem; max-width:60ch; font-size:0.98rem;}
 
   /* ---------- STACK ---------- */
@@ -438,8 +429,6 @@
   .tl-item .tl-list{margin:0.8rem 0 0; padding-left:1.1rem; display:flex; flex-direction:column; gap:0.4rem;}
   .tl-item .tl-list li{font-size:0.9rem; color:var(--text-dim);}
   .tl-item .tl-list strong{color:var(--text); font-weight:600;}
-  .tl-item .tl-skills{margin-top:0.9rem; font-size:0.85rem; color:var(--text-dim);}
-  .tl-item .tl-skills strong{color:var(--text);}
 
   /* ---------- STATS ---------- */
   .stats-band{
@@ -506,26 +495,24 @@
     <div class="nav-links">
       <a href="#accueil">Accueil</a>
       <a href="#projects">Projets</a>
-      <a href="#skills">Expertise</a>
+      <a href="#skills">Compétences</a>
       <a href="#parcours">Parcours</a>
       <a href="#about">À propos</a>
       <a href="#contact">Contact</a>
     </div>
     <div style="display:flex; align-items:center; gap:0.8rem;">
-      <a class="btn btn-ghost nav-cta" href="cv/Tarek_Boudmagh_CV.pdf" target="_blank" rel="noopener">Voir mon CV</a>
-      <a class="btn btn-primary nav-cta" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger</a>
+      <a class="btn btn-primary nav-cta" href="cv/Tarek_Boudmagh_CV.pdf" target="_blank" rel="noopener">Mon CV (PDF)</a>
       <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
     </div>
   </nav>
   <div id="mobile-menu" hidden>
     <a href="#accueil">Accueil</a>
     <a href="#projects">Projets</a>
-    <a href="#skills">Expertise</a>
+    <a href="#skills">Compétences</a>
     <a href="#parcours">Parcours</a>
     <a href="#about">À propos</a>
     <a href="#contact">Contact</a>
-    <a href="cv/Tarek_Boudmagh_CV.pdf" target="_blank" rel="noopener" style="color:var(--accent);">Voir mon CV ↗</a>
-    <a href="cv/Tarek_Boudmagh_CV.pdf" download style="color:var(--accent);">Télécharger mon CV ↓</a>
+    <a href="cv/Tarek_Boudmagh_CV.pdf" target="_blank" rel="noopener" style="color:var(--accent);">Mon CV (PDF) ↗</a>
     <a href="https://github.com/teamfada" target="_blank" rel="noopener" style="color:var(--accent);">GitHub ↗</a>
   </div>
 </header>
@@ -536,16 +523,15 @@
     <div class="hero-grid">
       <div>
         <div class="name">Tarek Boudmagh · Tizi Ouzou, Algérie</div>
-        <h1>Data &amp; Digital Specialist<br>Real Estate &amp; Investment</h1>
-        <p class="hero-skills">Data · Real Estate · Automation · SEO · WordPress · AI</p>
+        <h1>Spécialiste data &amp; digital<br>Immobilier et investissement</h1>
+        <p class="hero-skills">Data · Immobilier · Automatisation · SEO · WordPress · IA</p>
         <p class="hero-lede">Je transforme la donnée immobilière en informations fiables, contenus utiles et outils automatisés.</p>
         <div class="hero-actions">
           <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-          <a href="cv/Tarek_Boudmagh_CV.pdf" target="_blank" rel="noopener" class="btn btn-ghost">Voir mon CV</a>
-          <a href="cv/Tarek_Boudmagh_CV.pdf" download class="btn btn-ghost">Télécharger</a>
+          <a href="#contact" class="btn btn-ghost">Me contacter</a>
         </div>
         <div class="hero-tags">
-          <span class="mono" style="color:var(--accent); text-transform:none; letter-spacing:0;">125+ SCPI suivies · Python · WordPress · SEO · Automation</span>
+          <span class="mono" style="color:var(--accent); text-transform:none; letter-spacing:0;">Plus de 125 SCPI suivies au quotidien</span>
         </div>
       </div>
 
@@ -558,45 +544,11 @@
     </div>
   </section>
 
-  <section class="wrap" id="expertise">
-    <div class="section-head">
-      <span class="eyebrow">Ce que je fais</span>
-      <h2>Immobilier &gt; Data &gt; Content &gt; SEO &gt; Web &gt; Automatisation.</h2>
-      <p>Spécialisé dans l'écosystème SCPI et l'investissement immobilier, je relie la donnée, le contenu et la technique : fiabiliser l'information, la rendre visible et exploitable, puis automatiser ce qui peut l'être</p>
-    </div>
-    <div class="capabilities">
-      <div class="cap-card reveal-init">
-        <span class="cap-num">01</span>
-        <span class="cap-tag">Data</span>
-        <h3>Veille &amp; données SCPI</h3>
-        <p>Surveillance quotidienne des sociétés de gestion, collecte des informations (fonds immobiliers) et intégration dans la base de données.</p>
-      </div>
-      <div class="cap-card reveal-init">
-        <span class="cap-num">02</span>
-        <span class="cap-tag">Content</span>
-        <h3>Content, SEO &amp; forum</h3>
-        <p>Création et optimisation de contenus immobiliers orientés SEO, gestion éditoriale et modération du forum Portail-SCPI.fr.</p>
-      </div>
-      <div class="cap-card reveal-init">
-        <span class="cap-num">03</span>
-        <span class="cap-tag">Automation</span>
-        <h3>Automatisation</h3>
-        <p>Développement d'outils permettant de surveiller automatiquement des sites, documents et données.</p>
-      </div>
-      <div class="cap-card reveal-init">
-        <span class="cap-num">04</span>
-        <span class="cap-tag">Digital</span>
-        <h3>WordPress, support &amp; QA</h3>
-        <p>Gestion éditoriale WordPress, assistance informatique aux équipes et remontée des anomalies aux développeurs.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="wrap" id="missions">
     <div class="section-head">
-      <span class="eyebrow">Quotidien</span>
-      <h2>Mes missions au quotidien.</h2>
-      <p>Une vue d'ensemble de mon rôle — le détail des outils, méthodes et réalisations se trouve dans la section Projets</p>
+      <span class="eyebrow">Au quotidien</span>
+      <h2>Ce que je fais</h2>
+      <p>Je travaille sur l'écosystème SCPI : je collecte et vérifie la donnée, je la publie sous forme de contenus, et j'automatise les contrôles qui reviennent chaque jour. Le détail des outils est dans la section Projets.</p>
     </div>
     <div class="missions-grid">
       <div class="mission-card reveal-init">
@@ -631,7 +583,7 @@
         <div class="mission-icon" aria-hidden="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
         </div>
-        <h3>QA &amp; support</h3>
+        <h3>Tests et support</h3>
         <p>Détection des anomalies, reproduction des bugs et suivi avec les développeurs.</p>
       </div>
       <div class="mission-card reveal-init">
@@ -646,14 +598,13 @@
 
   <section class="wrap" id="projects">
     <div class="section-head">
-      <span class="eyebrow">Projets</span>
-      <h2>Des problèmes concrets, résolus avec les bons outils.</h2>
-      <p>Chaque projet répond à un besoin réel de l'écosystème SCPI — de la donnée brute à l'automatisation, en passant par le contenu et le web</p>
+      <span class="eyebrow">Réalisations</span>
+      <h2>Projets</h2>
+      <p>Cinq projets menés sur l'écosystème SCPI, de la collecte de données à la publication.</p>
     </div>
 
     <div class="project reveal-init">
       <div>
-        <span class="project-num">Projet 01</span>
         <h3>SCPI Monitoring</h3>
         <p class="lede">Automatiser la veille documentaire des SCPI</p>
 
@@ -667,7 +618,7 @@
         </div>
         <div class="case-block">
           <span class="case-label">Technologies</span>
-          <div class="stack"><span>Python</span><span>Selenium</span><span>Playwright</span><span>PDF Automation</span></div>
+          <div class="stack"><span>Python</span><span>Selenium</span><span>Playwright</span><span>Traitement de PDF</span></div>
         </div>
         <div class="case-block">
           <span class="case-label">Fonctionnalités</span>
@@ -682,9 +633,9 @@
         </div>
         <div class="case-block result">
           <span class="case-label">Résultat</span>
-          <p>Automatisation d'une partie de la veille documentaire et amélioration de la fiabilité et de la rapidité du contrôle des publications.</p>
+          <p>[À COMPLÉTER : nombre de sites surveillés] sites de sociétés de gestion contrôlés chaque jour sans intervention manuelle, soit environ [À COMPLÉTER : heures gagnées par semaine] heures gagnées par semaine.</p>
         </div>
-        <p class="repo-note">Code source privé (projet en production) — dépôt de démonstration à venir sur <a href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a></p>
+        <p class="repo-note">Code source privé (projet en production).</p>
       </div>
       <div class="project-visual">
         <div class="flow">
@@ -703,9 +654,9 @@
 
     <div class="project reverse reveal-init">
       <div>
-        <span class="project-num">Projet 02 · Concept</span>
-        <h3>Intelligent SCPI Comparator</h3>
-        <p class="lede">Un comparateur qui ne se contente pas de comparer</p>
+        <span class="project-num">Concept</span>
+        <h3>Comparateur SCPI selon le profil investisseur</h3>
+        <p class="lede">Classer les SCPI selon le besoin de l'investisseur, pas seulement selon leur rendement</p>
 
         <div class="case-block">
           <span class="case-label">Le problème</span>
@@ -719,13 +670,10 @@
           <span class="case-label">Approche</span>
           <div class="stack"><span>Data</span><span>Scoring</span><span>UX</span><span>SCPI</span></div>
         </div>
-        <div class="case-block result">
-          <span class="case-label">Valeur du concept</span>
-          <p>Démontre une capacité à penser la donnée SCPI du point de vue métier et investisseur, au-delà du simple affichage de chiffres.</p>
-        </div>
         <p class="repo-note">Prototype non publié — démo à venir sur <a href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a></p>
       </div>
       <div class="project-visual">
+        <span class="demo-badge">Exemple illustratif — maquette de concept</span>
         <div class="db-grid" style="grid-template-columns:1fr; margin-top:0;">
           <div><span>Montant</span><span>50 000 €</span></div>
           <div><span>Objectif</span><span>Revenus</span></div>
@@ -737,13 +685,11 @@
         <div class="score-card"><span>01 — SCPI A</span><span class="score">92/100</span></div>
         <div class="score-card"><span>02 — SCPI B</span><span class="score">87/100</span></div>
         <div class="score-card"><span>03 — SCPI C</span><span class="score">83/100</span></div>
-        <p style="margin-top:0.9rem; font-size:0.72rem; color:var(--text-faint);">Exemple illustratif — maquette de concept</p>
       </div>
     </div>
 
     <div class="project reveal-init">
       <div>
-        <span class="project-num">Projet 03</span>
         <h3>SCPI Data</h3>
         <p class="lede">Une base de données immobilière structurée</p>
 
@@ -761,16 +707,16 @@
         </div>
         <div class="case-block">
           <span class="case-label">Outils</span>
-          <div class="stack"><span>Python</span><span>SQLite</span><span>Data Pipelines</span></div>
+          <div class="stack"><span>Python</span><span>SQLite</span><span>Pipelines de données</span></div>
         </div>
         <div class="case-block result">
           <span class="case-label">Résultat</span>
-          <p>Une base de données SCPI structurée et à jour, couvrant plus de 125 SCPI, qui fiabilise le suivi des documents et indicateurs réglementaires.</p>
+          <p>Plus de 125 SCPI suivies dans la base, avec [À COMPLÉTER : nombre de documents réglementaires suivis] documents référencés et une mise à jour [À COMPLÉTER : fréquence de mise à jour].</p>
         </div>
-        <p class="repo-note">Données confidentielles (client) — schéma technique disponible sur demande via <a href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a></p>
+        <p class="repo-note">Données confidentielles (client) — schéma technique disponible <a href="#contact">sur demande</a>.</p>
       </div>
       <div class="project-visual">
-        <div class="panel-title" style="margin-bottom:0.9rem;">SCPI DATABASE — 125+ SCPI</div>
+        <div class="panel-title" style="margin-bottom:0.9rem;">Base SCPI — 125+ SCPI</div>
         <div class="db-grid">
           <div><span>Prix</span><span>✓</span></div>
           <div><span>Rendement</span><span>✓</span></div>
@@ -783,9 +729,8 @@
       </div>
     </div>
 
-    <div class="project reverse reveal-init">
+    <div class="project solo reveal-init">
       <div>
-        <span class="project-num">Projet 04</span>
         <h3>SEO immobilier</h3>
         <p class="lede">Transformer une donnée brute en contenu performant</p>
 
@@ -803,94 +748,49 @@
         </div>
         <div class="case-block result">
           <span class="case-label">Résultat</span>
-          <p>Des fiches et contenus immobiliers optimisés pour le référencement naturel, publiés et administrés directement sur WordPress.</p>
-        </div>
-      </div>
-      <div class="project-visual">
-        <div class="flow">
-          <div class="flow-step">Données brutes</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Analyse du mot-clé</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Structure SEO (H1/H2)</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Rédaction &amp; optimisation</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step" style="border-color:var(--accent); color:var(--text);">Publication WordPress</div>
+          <p>[À COMPLÉTER : nombre de fiches publiées] fiches et articles publiés sur WordPress ; [À COMPLÉTER : évolution des clics ou impressions dans Google Search Console, sur quelle période].</p>
         </div>
       </div>
     </div>
 
-    <div class="project reveal-init">
+    <div class="project solo reveal-init">
       <div>
-        <span class="project-num">Projet 05</span>
         <h3>Forum SCPI</h3>
-        <p class="lede">Modération, veille et animation communautaire</p>
-
-        <div class="case-block">
-          <span class="case-label">Le problème</span>
-          <p>Un forum d'investisseurs a besoin d'échanges de qualité, conformes et à jour pour rester utile — sans modération ni veille active, il perd en pertinence.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">La solution</span>
-          <p>Modération et contrôle des discussions pour garantir qualité, pertinence et conformité, combinés à une veille sur les questions et actualités du marché immobilier.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">Méthodologie</span>
-          <div class="stack"><span>Modération</span><span>Veille</span><span>Content</span><span>Communauté</span></div>
-        </div>
-        <div class="case-block result">
-          <span class="case-label">Résultat</span>
-          <p>Des discussions enrichies et conformes, alimentées par l'actualité du marché, utiles aux investisseurs qui consultent le forum.</p>
-        </div>
-      </div>
-      <div class="project-visual">
-        <div class="flow">
-          <div class="flow-step">Veille</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Information pertinente</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Analyse</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Création du sujet</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step" style="border-color:var(--accent); color:var(--text);">Discussion accessible à la communauté</div>
-        </div>
+        <p style="margin-top:1rem; font-size:0.94rem;">Je modère le forum de portail-scpi.fr et j'y lance des sujets à partir de l'actualité des SCPI : nouvelles publications des sociétés de gestion, changements de prix de part, questions fréquentes des investisseurs. Je vérifie aussi que les échanges restent conformes à la réglementation. [À COMPLÉTER : nombre de sujets créés ou de messages modérés par mois].</p>
       </div>
     </div>
   </section>
 
   <section class="wrap">
     <div class="section-head">
-      <span class="eyebrow">Méthode</span>
-      <h2>De l'information à l'action.</h2>
+      <span class="eyebrow">Façon de travailler</span>
+      <h2>Méthode</h2>
     </div>
     <div class="workflow-track">
-      <div class="wf-step reveal-init"><div class="n">01</div><div class="label">Veille</div></div>
-      <div class="wf-step reveal-init"><div class="n">02</div><div class="label">Collecte</div></div>
-      <div class="wf-step reveal-init"><div class="n">03</div><div class="label">Vérification</div></div>
-      <div class="wf-step reveal-init"><div class="n">04</div><div class="label">Structuration</div></div>
-      <div class="wf-step reveal-init"><div class="n">05</div><div class="label">Automatisation</div></div>
-      <div class="wf-step reveal-init"><div class="n">06</div><div class="label">Publication</div></div>
+      <div class="wf-step reveal-init"><div class="label">Veille</div></div>
+      <div class="wf-step reveal-init"><div class="label">Collecte</div></div>
+      <div class="wf-step reveal-init"><div class="label">Vérification</div></div>
+      <div class="wf-step reveal-init"><div class="label">Structuration</div></div>
+      <div class="wf-step reveal-init"><div class="label">Automatisation</div></div>
+      <div class="wf-step reveal-init"><div class="label">Publication</div></div>
     </div>
-    <p class="workflow-note">Je combine veille humaine, vérification des sources et automatisation afin de maintenir une information fiable et exploitable</p>
+    <p class="workflow-note">Je vérifie chaque information à sa source avant de la publier, et j'automatise les contrôles qui se répètent.</p>
   </section>
 
   <section class="wrap" id="skills">
     <div class="section-head">
-      <span class="eyebrow">Compétences</span>
-      <h2>Ce que je maîtrise réellement.</h2>
-      <p>Data → Automatisation → Immobilier → Web → SEO → IA : des piliers complémentaires, tous ancrés dans l'écosystème SCPI.</p>
+      <span class="eyebrow">Outils et savoir-faire</span>
+      <h2>Compétences</h2>
     </div>
     <div class="stack-grid">
       <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Data &amp; Automation</span>
+        <span class="eyebrow" style="color:var(--text-faint);">Data et automatisation</span>
         <div class="skill-levels">
           <div class="skill-level"><span class="name">Python</span><span class="level">Intermédiaire</span></div>
           <div class="skill-level"><span class="name">Selenium</span><span class="level">Intermédiaire</span></div>
         </div>
         <div class="skill-tags">
-          <span>Playwright</span><span>Streamlit</span><span>SQLite</span><span>Web scraping</span><span>Data cleaning</span><span>Data monitoring</span>
+          <span>Playwright</span><span>Streamlit</span><span>SQLite</span><span>Web scraping</span><span>Nettoyage de données</span><span>Surveillance de données</span>
         </div>
       </div>
       <div class="stack-group reveal-init">
@@ -903,7 +803,7 @@
         </div>
       </div>
       <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">SEO &amp; Analytics</span>
+        <span class="eyebrow" style="color:var(--text-faint);">SEO et mesure d'audience</span>
         <div class="skill-levels">
           <div class="skill-level"><span class="name">SEO on-page</span><span class="level">Avancé</span></div>
         </div>
@@ -912,7 +812,7 @@
         </div>
       </div>
       <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Data &amp; Immobilier</span>
+        <span class="eyebrow" style="color:var(--text-faint);">Données immobilières</span>
         <div class="skill-levels">
           <div class="skill-level"><span class="name">Data SCPI</span><span class="level">Avancé</span></div>
         </div>
@@ -926,11 +826,11 @@
           <div class="skill-level"><span class="name">Prompt Engineering</span><span class="level">Intermédiaire</span></div>
         </div>
         <div class="skill-tags">
-          <span>LLM</span><span>AI Automation</span><span>Extraction &amp; structuration de données</span><span>Génération de contenu assistée</span>
+          <span>LLM</span><span>Automatisation par IA</span><span>Extraction &amp; structuration de données</span><span>Génération de contenu assistée</span>
         </div>
       </div>
       <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Support &amp; Coordination</span>
+        <span class="eyebrow" style="color:var(--text-faint);">Support et coordination</span>
         <div class="skill-tags" style="border-top:none; padding-top:0;">
           <span>Assistance technique</span><span>Diagnostic d'anomalies</span><span>Remontée de bugs</span><span>Coordination avec les développeurs</span>
         </div>
@@ -940,37 +840,32 @@
 
   <section class="wrap" id="parcours">
     <div class="section-head">
-      <span class="eyebrow">Parcours</span>
-      <h2>Un fil conducteur, pas une succession de métiers.</h2>
+      <span class="eyebrow">Expérience</span>
+      <h2>Parcours</h2>
     </div>
     <div class="timeline">
       <div class="tl-item reveal-init">
         <div class="tl-year">2021 – 2023</div>
         <h4>Superviseur régional → Coordinateur national</h4>
         <span class="tl-sub">Télécommunications — Ooredoo &amp; Djezzy</span>
-        <p style="margin-top:0.6rem; font-size:0.92rem;">Progression d'un poste de supervision régionale vers une fonction de coordination nationale, avec pilotage des opérations, management des équipes et coordination de plusieurs milliers de collaborateurs à travers le territoire algérien.</p>
+        <p style="margin-top:0.6rem; font-size:0.92rem;">Progression d'un poste de supervision régionale vers une fonction de coordination nationale, avec le pilotage des opérations et la coordination de plus de 2 000 collaborateurs en Algérie.</p>
         <ul class="tl-list">
-          <li>Supervision des opérations télécom aux niveaux régional et national</li>
-          <li>Management et coordination des superviseurs régionaux et de plus de <strong>2 000 collaborateurs</strong></li>
-          <li>Pilotage des opérations liées aux projets <strong>Ooredoo (gardiennage)</strong> et <strong>Djezzy (assistance technique)</strong></li>
-          <li>Suivi des équipes terrain, des performances et des objectifs opérationnels</li>
-          <li>Coordination entre les équipes, les responsables régionaux et les différents interlocuteurs</li>
-          <li>Centralisation, analyse et remontée des informations opérationnelles au niveau national</li>
-          <li>Reporting régulier et suivi de l'avancement des opérations</li>
+          <li>Supervision des opérations télécom, d'abord en région puis au niveau national</li>
+          <li>Management des superviseurs régionaux et coordination de plus de <strong>2 000 collaborateurs</strong></li>
+          <li>Pilotage des projets <strong>Ooredoo (gardiennage)</strong> et <strong>Djezzy (assistance technique)</strong></li>
+          <li>Suivi des performances des équipes et reporting à la direction nationale</li>
         </ul>
-        <p class="tl-skills"><strong>Compétences clés :</strong> Management d'équipes · Supervision opérationnelle · Coordination nationale · Gestion de projets · Pilotage terrain · Reporting</p>
       </div>
       <div class="tl-item reveal-init">
         <div class="tl-year">2024</div>
-        <h4>Data &amp; Content / Web Operations — Starty Media</h4>
+        <h4>Données, contenu et opérations web — Starty Media</h4>
         <p style="margin-top:0.4rem; font-size:0.92rem;">Évolution vers l'écosystème SCPI : gestion et mise à jour des données, des documents réglementaires et commerciaux, administration WordPress, optimisation SEO et développement de premiers scripts d'automatisation.</p>
-        <div class="role-list"><span>Data SCPI</span><span>WordPress</span><span>SEO</span><span>Content</span><span>Automation</span></div>
+        <div class="role-list"><span>Data SCPI</span><span>WordPress</span><span>SEO</span><span>Contenu</span><span>Automatisation</span></div>
       </div>
       <div class="tl-item now reveal-init">
         <div class="tl-year">Aujourd'hui</div>
-        <h4>Data &amp; Content Specialist — Real Estate</h4>
+        <h4>Spécialiste data et contenu — Immobilier</h4>
         <p style="margin-top:0.4rem; font-size:0.92rem;">Fortuny Conseil &amp; portail-scpi.fr — fiabilisation de la donnée, automatisation de la veille, outils internes.</p>
-        <div class="role-list"><span>Management → Digital → Data → Immobilier → Automatisation</span></div>
       </div>
     </div>
   </section>
@@ -979,13 +874,13 @@
     <div class="about-grid">
       <div class="reveal-init">
         <span class="eyebrow">À propos</span>
-        <h2>Je m'intéresse à ce qui se trouve entre la donnée et le produit.</h2>
+        <h2>Je travaille sur la donnée SCPI depuis 2024</h2>
         <p class="desc">Mon parcours m'a progressivement amené vers un profil hybride combinant immobilier, data, contenu et technologie.</p>
         <p class="desc">Aujourd'hui, je travaille principalement autour de la donnée immobilière et des plateformes digitales. Je m'intéresse particulièrement à l'automatisation des tâches répétitives, à la fiabilisation des informations et à la création d'outils permettant de mieux exploiter la donnée.</p>
         <p class="desc">Depuis 2024, je gère la donnée SCPI et les opérations digitales chez <strong style="color:var(--text);">Starty Media</strong>, pour le compte du cabinet <strong style="color:var(--text);">Fortuny Conseil</strong> et de sa plateforme <strong style="color:var(--text);">portail-scpi.fr</strong>. Mes missions couvrent le contrôle et la mise à jour de la documentation réglementaire, le suivi des souscriptions pour une société de gestion dans le cadre d'une prestation de sous-traitance, l'administration éditoriale de sites WordPress ainsi que l'automatisation des contrôles et processus de gestion des données.</p>
       </div>
       <div class="interest-chips reveal-init" style="align-content:start;">
-        <span>Data</span><span>Automation</span><span>Real Estate</span><span>AI</span><span>SEO</span><span>Digital products</span>
+        <span>Data</span><span>Automatisation</span><span>Immobilier</span><span>IA</span><span>SEO</span><span>Produits numériques</span>
       </div>
     </div>
   </section>
@@ -998,15 +893,14 @@
       <div class="contact-info">
         <span><i class="ci-dot"></i>Tizi Ouzou, Algérie</span>
         <span><i class="ci-dot"></i><a href="tel:+213551233332" class="mono">+213 551 23 33 32</a></span>
-        <span><i class="ci-dot"></i><a href="mailto:Boudmaghtrk@gmail.com" class="mono">Boudmaghtrk@gmail.com</a> / <a href="mailto:Tarek@startymedia.com" class="mono">Tarek@startymedia.com</a></span>
+        <span><i class="ci-dot"></i><a href="mailto:Boudmaghtrk@gmail.com" class="mono">Boudmaghtrk@gmail.com</a></span>
       </div>
       <div class="contact-actions">
         <a class="btn btn-primary" href="mailto:Boudmaghtrk@gmail.com">Me contacter</a>
         <a class="btn btn-ghost" href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">Voir LinkedIn</a>
         <a class="btn btn-ghost" href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a>
         <a class="btn btn-ghost" href="tel:+213551233332">Appeler</a>
-        <a class="btn btn-ghost" href="cv/Tarek_Boudmagh_CV.pdf" target="_blank" rel="noopener">Voir mon CV</a>
-        <a class="btn btn-ghost" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV</a>
+        <a class="btn btn-ghost" href="cv/Tarek_Boudmagh_CV.pdf" target="_blank" rel="noopener">Mon CV (PDF)</a>
       </div>
     </div>
   </section>
@@ -1016,7 +910,7 @@
   <div class="footer-row">
     <div>
       <div class="footer-brand">Tarek BOUDMAGH</div>
-      <div class="footer-tag">Immobilier · Data · Content · SEO · Web · Automatisation</div>
+      <div class="footer-tag">Data et digital pour l'immobilier</div>
     </div>
     <div class="footer-links">
       <a href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">LinkedIn</a>
