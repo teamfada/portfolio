@@ -115,7 +115,13 @@
   .wrap{max-width:70rem; margin:0 auto; padding-left:clamp(1.25rem,4vw,2.5rem); padding-right:clamp(1.25rem,4vw,2.5rem);}
 
   /* ---------- Bandeau de titre ---------- */
-  .mast{border-top:5px solid var(--ink); border-bottom:1px solid var(--rule);}
+  /* bandeau figé : la navigation reste accessible pendant la lecture */
+  .mast{position:sticky; top:0; z-index:10; background:var(--paper); border-top:5px solid var(--ink); border-bottom:1px solid var(--rule);}
+  /* une ancre ne doit pas arriver cachée sous le bandeau */
+  section[id]{scroll-margin-top:5.5rem;}
+  @media (max-width:820px){
+    .js .nav.open{max-height:calc(100vh - 5rem); overflow-y:auto;}
+  }
   .mast .wrap{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.5rem 1.5rem; min-height:4.25rem;}
   .brand{font-family:var(--serif); font-size:1.4rem; font-weight:600; letter-spacing:-0.01em; color:var(--ink); text-decoration:none;}
   .nav{display:flex; align-items:center; gap:1.75rem;}
