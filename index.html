@@ -13,10 +13,11 @@
 <meta property="og:url" content="https://teamfada.github.io/portfolio/">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230B0F19'/%3E%3Ctext x='50' y='68' font-family='Arial,sans-serif' font-size='58' font-weight='800' fill='%234F8CFF' text-anchor='middle'%3ETB%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='12' fill='%23F5F0E6'/%3E%3Crect x='3' y='3' width='94' height='94' rx='9' fill='none' stroke='%231B1915' stroke-width='3'/%3E%3Ctext x='50' y='67' font-family='Georgia,serif' font-size='54' font-weight='700' fill='%23A63A1F' text-anchor='middle'%3ETB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,887 +55,431 @@
 }
 </script>
 <style>
+  /* Direction : le bulletin trimestriel. Papier, encre, une seule couleur d'accent (brique d'imprimerie). */
   :root{
-    --bg: #0B0F19;
-    --bg-elevated: #111827;
-    --bg-elevated-2: #151d2e;
-    --border: #22293b;
-    --text: #F8FAFC;
-    --text-dim: #94A3B8;
-    --text-faint: #5b6980;
-    --accent: #4F8CFF;
-    --accent-soft: rgba(79,140,255,0.12);
-    --accent-2: #22C55E;
-    --accent-2-soft: rgba(34,197,94,0.12);
-    --header-bg: #0B0F19;
-    --btn-primary-text: #04101f;
-    --btn-primary-hover: #6a9fff;
-    --card-shadow: 0 30px 60px -30px rgba(0,0,0,0.6);
-    --bars-fade: rgba(79,140,255,0.25);
-    --hero-glow: rgba(79,140,255,0.10);
-    --font-display: 'Manrope', 'Segoe UI', system-ui, sans-serif;
-    --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
-    --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+    --paper:#F5F0E6;
+    --paper-2:#ECE5D4;
+    --ink:#1B1915;
+    --ink-2:#5A5348;
+    --rule:#D3C9B5;
+    --accent:#A63A1F;
+    --serif:'Newsreader','Iowan Old Style','Palatino Linotype',Georgia,serif;
+    --sans:'Public Sans',system-ui,'Segoe UI',Helvetica,Arial,sans-serif;
+    --mono:ui-monospace,'SFMono-Regular',Consolas,'Liberation Mono',monospace;
+    color-scheme:light;
   }
-
-  @media (prefers-color-scheme: light){
-    :root:not([data-theme="dark"]){
-      --bg: #F7F9FC;
-      --bg-elevated: #FFFFFF;
-      --bg-elevated-2: #EEF2F8;
-      --border: #DCE3EE;
-      --text: #0B0F19;
-      --text-dim: #4B5768;
-      --text-faint: #8792A2;
-      --accent: #2F6FE0;
-      --accent-soft: rgba(47,111,224,0.10);
-      --accent-2: #0F9D58;
-      --accent-2-soft: rgba(15,157,88,0.10);
-      --header-bg: #F7F9FC;
-      --btn-primary-text: #FFFFFF;
-      --btn-primary-hover: #4a86e8;
-      --card-shadow: 0 20px 45px -30px rgba(15,23,42,0.18);
-      --bars-fade: rgba(47,111,224,0.16);
-      --hero-glow: rgba(47,111,224,0.08);
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#1C1915;
+      --paper-2:#26221C;
+      --ink:#EDE6D8;
+      --ink-2:#B3AA9A;
+      --rule:#3C372E;
+      --accent:#E0826A;
+      color-scheme:dark;
     }
   }
-  :root[data-theme="light"]{
-    --bg: #F7F9FC;
-    --bg-elevated: #FFFFFF;
-    --bg-elevated-2: #EEF2F8;
-    --border: #DCE3EE;
-    --text: #0B0F19;
-    --text-dim: #4B5768;
-    --text-faint: #8792A2;
-    --accent: #2F6FE0;
-    --accent-soft: rgba(47,111,224,0.10);
-    --accent-2: #0F9D58;
-    --accent-2-soft: rgba(15,157,88,0.10);
-    --header-bg: #F7F9FC;
-    --btn-primary-text: #FFFFFF;
-    --btn-primary-hover: #4a86e8;
-    --card-shadow: 0 20px 45px -30px rgba(15,23,42,0.18);
-    --bars-fade: rgba(47,111,224,0.16);
-    --hero-glow: rgba(47,111,224,0.08);
+  :root[data-theme="dark"]{
+    --paper:#1C1915;
+    --paper-2:#26221C;
+    --ink:#EDE6D8;
+    --ink-2:#B3AA9A;
+    --rule:#3C372E;
+    --accent:#E0826A;
+    color-scheme:dark;
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth; color-scheme:light dark;}
+  html{-webkit-text-size-adjust:100%;}
+  @media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth;} }
   body{
     margin:0;
-    background:var(--bg);
-    color:var(--text);
-    font-family:var(--font-body);
-    line-height:1.6;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:1.0625rem;
+    line-height:1.65;
     -webkit-font-smoothing:antialiased;
   }
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto;}
-    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  h1,h2,h3{font-family:var(--serif); font-weight:500; margin:0; text-wrap:balance; letter-spacing:-0.01em;}
+  p{margin:0 0 1em;}
+  a{color:var(--accent); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:0.22em;}
+  a:hover{text-decoration-thickness:2px;}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:3px;}
+  ::selection{background:var(--accent); color:var(--paper);}
+  strong{font-weight:600;}
+  .sr{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}
+  .skip{position:absolute; left:-999px; top:0; z-index:20; background:var(--ink); color:var(--paper); padding:0.6rem 1rem;}
+  .skip:focus{left:1rem; top:1rem;}
+
+  .wrap{max-width:70rem; margin:0 auto; padding-left:clamp(1.25rem,4vw,2.5rem); padding-right:clamp(1.25rem,4vw,2.5rem);}
+
+  /* ---------- Bandeau de titre ---------- */
+  .mast{border-top:5px solid var(--ink); border-bottom:1px solid var(--rule);}
+  .mast .wrap{display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:0.5rem 1.5rem; min-height:4.25rem;}
+  .brand{font-family:var(--serif); font-size:1.4rem; font-weight:600; letter-spacing:-0.01em; color:var(--ink); text-decoration:none;}
+  .nav{display:flex; align-items:center; gap:1.75rem;}
+  .nav a{font-size:0.92rem; color:var(--ink); text-decoration:none; padding:0.25rem 0; border-bottom:1px solid transparent;}
+  .nav a:hover{border-bottom-color:var(--accent);}
+  .nav a.cv{color:var(--accent); font-weight:600;}
+  .menu-btn{display:none; font:inherit; font-size:0.9rem; background:none; color:var(--ink); border:1px solid var(--ink); padding:0.45rem 0.9rem; cursor:pointer;}
+  @media (max-width:820px){
+    .js .menu-btn{display:block;}
+    .nav{flex-basis:100%; flex-direction:column; align-items:flex-start; gap:0; padding-bottom:0.75rem;}
+    .nav a{width:100%; padding:0.7rem 0; border-top:1px solid var(--rule); border-bottom:0;}
+    .js .nav:not(.open){display:none;}
   }
 
-  h1,h2,h3,h4{font-family:var(--font-display); font-weight:800; text-wrap:balance; margin:0; color:var(--text);}
-  p{margin:0; color:var(--text-dim);}
-  a{color:inherit; text-decoration:none;}
-  ::selection{background:var(--accent-soft); color:var(--text);}
-
-  .mono{font-family:var(--font-mono);}
-  .eyebrow{
-    font-family:var(--font-mono);
-    font-size:0.72rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--accent);
-    display:flex; align-items:center; gap:0.5rem;
-  }
-  .eyebrow::before{content:''; width:6px; height:6px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 3px var(--accent-soft); flex:none;}
-
-  /* marges latérales seulement : les sections gardent leur espacement vertical */
-  .wrap{max-width:1180px; margin:0 auto; padding-left:2rem; padding-right:2rem;}
-  @media (max-width:640px){ .wrap{padding-left:1.25rem; padding-right:1.25rem;} }
-
-  section{padding:6.5rem 0;}
-  @media (max-width:820px){ section{padding:4.5rem 0;} }
-
-  /* ---------- NAV ---------- */
-  header{
-    position:fixed; top:0; left:0; right:0; z-index:100;
-    background:var(--header-bg);
-    border-bottom:1px solid var(--border);
-    transform:translateZ(0);
-    -webkit-transform:translateZ(0);
-    will-change:transform;
-    backface-visibility:hidden;
-    -webkit-backface-visibility:hidden;
-  }
-  .header-spacer{height:69px;}
-  nav{
-    max-width:1180px; margin:0 auto; padding:0 2rem;
-    height:68px; display:flex; align-items:center; justify-content:space-between;
-  }
-  .logo{font-family:var(--font-display); font-weight:800; font-size:1rem; letter-spacing:0.02em;}
-  .nav-links{display:flex; align-items:center; gap:2.1rem;}
-  .nav-links a{
-    font-size:0.92rem; color:var(--text-dim); font-weight:500;
-    position:relative; padding:0.3rem 0; transition:color 0.15s;
-  }
-  .nav-links a:hover{color:var(--text);}
-  .nav-links a::after{
-    content:''; position:absolute; left:0; right:0; bottom:-2px; height:2px;
-    background:var(--accent); transform:scaleX(0); transform-origin:left;
-    transition:transform 0.2s;
-  }
-  .nav-links a:hover::after{transform:scaleX(1);}
-  .btn{
-    font-family:var(--font-body); font-weight:600; font-size:0.88rem;
-    padding:0.65rem 1.3rem; border-radius:8px; border:1px solid transparent;
-    cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem;
-    transition:transform 0.15s, border-color 0.15s, background 0.15s;
-  }
-  .btn:focus-visible, a:focus-visible, button:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
-  .btn-primary{background:var(--accent); color:var(--btn-primary-text);}
-  .btn-primary:hover{transform:translateY(-1px); background:var(--btn-primary-hover);}
-  .btn-ghost{border-color:var(--border); color:var(--text);}
-  .btn-ghost:hover{border-color:var(--accent);}
-  .nav-cta{display:none; padding:0.55rem 1rem; font-size:0.84rem;}
-  @media (min-width:1080px){ .nav-cta{display:inline-flex;} }
-  .nav-links{display:none;}
-  @media (min-width:820px){ .nav-links{display:flex;} }
-  .burger{
-    display:flex; background:none; border:1px solid var(--border); border-radius:8px;
-    color:var(--text); width:40px; height:40px; align-items:center; justify-content:center;
-    font-size:1.1rem; cursor:pointer;
-  }
-  @media (min-width:820px){ .burger{display:none;} }
-  #mobile-menu{
-    display:flex; flex-direction:column; gap:0.2rem; padding:0.5rem 1.25rem 1.25rem;
-    border-bottom:1px solid var(--border); background:var(--bg);
-    max-height:calc(100vh - 69px); overflow-y:auto;
-  }
-  #mobile-menu[hidden]{display:none;}
-  @media (min-width:820px){ #mobile-menu{display:none !important;} }
-  #mobile-menu a{padding:0.7rem 0; color:var(--text-dim); font-size:0.95rem; border-bottom:1px solid var(--border);}
-  #mobile-menu a:last-child{border-bottom:none;}
-
-  /* ---------- HERO ---------- */
-  .hero{padding-top:5rem; padding-bottom:4rem;}
-  .hero-grid{display:grid; grid-template-columns:1.15fr 1fr; gap:3.5rem; align-items:center;}
-  @media (max-width:960px){ .hero-grid{grid-template-columns:1fr; gap:3rem;} }
-
-  .hero h1{font-size:clamp(1.9rem, 3.6vw, 2.6rem); line-height:1.16; margin-top:0.6rem;}
-  .hero .name{
-    font-family:var(--font-mono); font-size:0.85rem; letter-spacing:0.08em;
-    color:var(--text-faint); text-transform:uppercase;
-  }
-  .hero-skills{
-    margin-top:1rem; font-family:var(--font-mono); font-size:0.82rem;
-    letter-spacing:0.03em; color:var(--accent);
-  }
-  .hero-lede{margin-top:1rem; font-size:1.1rem; font-weight:500; color:var(--text); max-width:46ch;}
-  .hero-actions{display:flex; gap:0.9rem; margin-top:2rem; flex-wrap:wrap;}
-  .hero-tags{
-    display:flex; flex-wrap:wrap; gap:0.55rem 1.6rem; margin-top:2.6rem;
-    padding-top:1.6rem; border-top:1px solid var(--border);
-  }
-  .hero-tags span{
-    font-family:var(--font-mono); font-size:0.74rem; letter-spacing:0.09em;
-    color:var(--text-faint); text-transform:uppercase;
+  /* ---------- Ouverture ---------- */
+  .open{padding-top:clamp(2.5rem,6vw,4.5rem); padding-bottom:clamp(3rem,7vw,5.5rem);}
+  .open-grid{display:grid; grid-template-columns:minmax(0,1fr) 17rem; gap:clamp(2rem,6vw,5rem); align-items:start;}
+  .dateline{font-size:0.88rem; color:var(--ink-2); padding-bottom:0.9rem; margin-bottom:2rem; border-bottom:1px solid var(--rule); max-width:36rem;}
+  h1{font-size:clamp(2.6rem,7vw,4.9rem); line-height:1.03; letter-spacing:-0.02em; max-width:12em;}
+  .stand{font-family:var(--serif); font-size:clamp(1.25rem,2.4vw,1.5rem); line-height:1.45; margin:2rem 0 1.2rem; max-width:32rem;}
+  .story{max-width:32rem;}
+  .actions{display:flex; flex-wrap:wrap; gap:0.6rem 2rem; margin-top:1.75rem;}
+  .actions a{font-weight:600; text-decoration-thickness:2px;}
+  .portrait{margin:0;}
+  .portrait img{display:block; width:100%; height:auto; aspect-ratio:700/931; object-fit:cover;}
+  .portrait figcaption{margin-top:0.6rem; padding-top:0.5rem; border-top:3px solid var(--ink); font-size:0.84rem; color:var(--ink-2);}
+  @media (max-width:820px){
+    .open-grid{grid-template-columns:1fr;}
+    .portrait{max-width:15rem;}
   }
 
-  /* dashboard visual */
-  .panel{
-    background:linear-gradient(180deg, var(--bg-elevated), var(--bg-elevated-2));
-    border:1px solid var(--border); border-radius:16px;
-    padding:1.5rem 1.5rem 1.7rem;
-    box-shadow:var(--card-shadow);
+  /* ---------- Sections numérotées ---------- */
+  .sec{border-top:1px solid var(--rule); padding-top:var(--pt,3.5rem); padding-bottom:var(--pb,3.5rem);}
+  .sec-grid{display:grid; grid-template-columns:11rem minmax(0,1fr); column-gap:clamp(2rem,5vw,4rem);}
+  .sec-grid--3{grid-template-columns:11rem minmax(0,1fr) 15rem;}
+  .rail .num{display:block; font-family:var(--serif); font-size:2.6rem; line-height:1; color:var(--accent);}
+  .rail h2{font-size:1.4rem; line-height:1.2; font-weight:600; margin-top:0.5rem;}
+  .tight{--pt:2.5rem; --pb:2.75rem;}
+  .loose{--pt:5rem; --pb:6rem;}
+  @media (max-width:1080px){
+    .sec-grid--3{grid-template-columns:11rem minmax(0,1fr);}
+    .sec-grid--3 .margin{grid-column:2; margin-top:2.5rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(13rem,1fr)); gap:0 2rem;}
   }
-  .panel-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:1.2rem;}
-  .panel-title{font-family:var(--font-mono); font-size:0.75rem; letter-spacing:0.1em; color:var(--text-dim); text-transform:uppercase;}
-  .live-dot{display:flex; align-items:center; gap:0.4rem; font-family:var(--font-mono); font-size:0.68rem; color:var(--accent-2);}
-  .live-dot i{width:6px; height:6px; border-radius:50%; background:var(--accent-2); animation:pulse 1.8s ease-in-out infinite;}
-  @keyframes pulse{0%,100%{opacity:1; box-shadow:0 0 0 0 rgba(34,197,94,0.45);} 50%{opacity:0.7; box-shadow:0 0 0 5px rgba(34,197,94,0);}}
-
-  .stat-row{display:flex; justify-content:space-between; align-items:baseline; padding:0.55rem 0; border-bottom:1px solid var(--border);}
-  .stat-row:last-of-type{border-bottom:none;}
-  .stat-label{font-size:0.85rem; color:var(--text-dim);}
-  .stat-value{font-family:var(--font-mono); font-weight:500; font-size:1rem;}
-  .stat-value.up{color:var(--accent-2);}
-
-  .bars{display:flex; align-items:flex-end; gap:6px; height:64px; margin:1.3rem 0 0.6rem;}
-  .bars i{
-    flex:1; background:linear-gradient(180deg, var(--accent), var(--bars-fade));
-    border-radius:3px 3px 0 0; display:block;
+  @media (max-width:820px){
+    .sec-grid, .sec-grid--3{display:block;}
+    .rail{display:flex; align-items:baseline; gap:0.9rem; margin-bottom:1.5rem;}
+    .rail .num{font-size:2rem;}
+    .rail h2{margin-top:0; font-size:1.3rem;}
+    .sec-grid--3 .margin{margin-top:2rem;}
+    .loose{--pt:3.5rem; --pb:4rem;}
+    .tight{--pt:2.25rem; --pb:2.5rem;}
   }
 
-  .panel-foot{
-    display:flex; align-items:center; gap:0.5rem; margin-top:1rem; padding-top:1rem;
-    border-top:1px solid var(--border); font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint);
-  }
-  .panel-foot i{width:6px; height:6px; border-radius:50%; background:var(--accent-2); flex:none;}
-
-  .portrait-frame{
-    background:linear-gradient(180deg, var(--bg-elevated), var(--bg-elevated-2));
-    border:1px solid var(--border); border-radius:16px;
-    padding:0.6rem 0.6rem 1.1rem;
-    box-shadow:var(--card-shadow);
-  }
-  .portrait-frame img{
-    display:block; width:100%; height:auto; border-radius:11px;
-    aspect-ratio:700/931; object-fit:cover;
-  }
-  .portrait-caption{
-    display:flex; align-items:center; justify-content:center;
-    margin-top:1rem; padding-top:1rem; border-top:1px solid var(--border);
-  }
-  .portrait-caption .live-dot{font-family:var(--font-mono); font-size:0.72rem; color:var(--text-faint);}
-  .portrait-caption .live-dot i{background:var(--accent-2);}
-
-  /* ---------- SECTION HEAD ---------- */
-  .section-head{max-width:640px; margin-bottom:3rem;}
-  .section-head h2{font-size:clamp(1.6rem, 3vw, 2.2rem); margin-top:0.7rem;}
-  .section-head p{margin-top:1rem; font-size:1.02rem;}
-
-  /* ---------- MISSIONS ---------- */
-  .missions-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.2rem;}
-  @media (max-width:900px){ .missions-grid{grid-template-columns:repeat(2, 1fr);} }
-  @media (max-width:560px){ .missions-grid{grid-template-columns:1fr;} }
-  .mission-card{
-    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
-    padding:1.6rem 1.5rem; transition:border-color 0.2s, transform 0.2s;
-  }
-  .mission-card:hover{border-color:var(--accent); transform:translateY(-3px);}
-  .mission-icon{
-    width:38px; height:38px; border-radius:10px; background:var(--accent-soft);
-    color:var(--accent); display:flex; align-items:center; justify-content:center;
-  }
-  .mission-icon svg{width:19px; height:19px;}
-  .mission-card h3{font-size:1rem; font-weight:700; margin-top:1rem;}
-  .mission-card p{margin-top:0.5rem; font-size:0.88rem;}
-
-  /* ---------- PROJECTS ---------- */
-  .project{
-    display:grid; grid-template-columns:1fr 1fr; gap:3rem;
-    padding:3rem 0; border-top:1px solid var(--border);
-    align-items:center;
-  }
-  .project:last-child{padding-bottom:0;}
-  @media (max-width:900px){ .project{grid-template-columns:1fr; gap:2rem;} }
-  .project.reverse .project-visual{order:2;}
-  .project.solo{grid-template-columns:1fr;}
-  .project.solo .case-block p, .project.solo > div > p{max-width:70ch;}
-  @media (max-width:900px){ .project.reverse .project-visual{order:0;} }
-
-  .project-num{font-family:var(--font-mono); font-size:0.78rem; color:var(--accent);}
-  .project h3{font-size:1.55rem; margin-top:0.5rem;}
-  .project .lede{font-family:var(--font-display); font-weight:700; font-size:1.02rem; color:var(--text-dim); margin-top:0.35rem;}
-
-  .case-block{margin-top:1.4rem;}
-  .case-block:first-of-type{margin-top:1.3rem;}
-  .case-label{
-    font-family:var(--font-mono); font-size:0.7rem; letter-spacing:0.1em;
-    text-transform:uppercase; color:var(--text-faint); display:block; margin-bottom:0.4rem;
-  }
-  .case-block p{font-size:0.94rem; max-width:52ch;}
-  .case-block.result{
-    border-left:2px solid var(--accent-2); padding-left:1rem;
-  }
-  .case-block.result p{color:var(--text);}
-  .repo-note{margin-top:1.1rem; font-size:0.78rem; color:var(--text-faint);}
-  .repo-note a{color:var(--accent); text-decoration:underline; text-underline-offset:2px;}
-  .demo-badge{
-    display:inline-block; margin-bottom:1rem; padding:0.3rem 0.65rem; border-radius:6px;
-    border:1px solid var(--accent); color:var(--accent); font-size:0.74rem; letter-spacing:0.04em;
+  /* lignes séparées par des filets */
+  .rows{margin:0;}
+  .rows .row{display:grid; grid-template-columns:11rem minmax(0,1fr); gap:0.25rem 2rem; padding:0.95rem 0; border-top:1px solid var(--rule);}
+  .rows .row:first-child{border-top:1px solid var(--ink);}
+  .rows dt{font-weight:600; font-size:0.95rem;}
+  .rows dd{margin:0; max-width:40rem;}
+  .rows dd p{margin:0;}
+  .sub{font-size:1.15rem; font-weight:600; margin:2.5rem 0 0.9rem;}
+  .tools .row{padding:0.7rem 0;}
+  .tools dt{font-weight:500; color:var(--ink-2);}
+  .tools dd{font-size:0.95rem;}
+  @media (max-width:820px){
+    .rows .row{grid-template-columns:1fr; gap:0.15rem;}
   }
 
-  .stack{display:flex; flex-wrap:wrap; gap:0.5rem; margin-top:0.2rem;}
-  .stack span{
-    font-family:var(--font-mono); font-size:0.72rem; padding:0.32rem 0.65rem;
-    border:1px solid var(--border); border-radius:6px; color:var(--text-dim);
-  }
-  .feat-list{margin-top:0.2rem; display:flex; flex-direction:column; gap:0.45rem;}
-  .feat-list div{display:flex; gap:0.55rem; font-size:0.9rem; color:var(--text-dim);}
-  .feat-list div::before{content:'✓'; color:var(--accent-2); flex:none; font-weight:600;}
+  /* ---------- Projet principal ---------- */
+  .lede{font-family:var(--serif); font-size:clamp(1.35rem,2.6vw,1.7rem); line-height:1.3; margin:0 0 1.5rem; max-width:30rem;}
+  .main-text{max-width:38rem;}
+  .pull{font-family:var(--serif); font-size:1.3rem; line-height:1.4; margin:2rem 0; padding:1.1rem 0; border-top:1px solid var(--ink); border-bottom:1px solid var(--rule); max-width:38rem;}
+  .note{border-top:1px solid var(--ink); padding-top:0.6rem; margin-bottom:1.75rem; font-size:0.9rem; color:var(--ink-2);}
+  .note b{display:block; color:var(--ink); font-weight:600; margin-bottom:0.2rem;}
+  .note .big{display:block; font-family:var(--serif); font-size:3.6rem; line-height:1; color:var(--accent); margin:0.1rem 0 0.3rem;}
+  .note p{margin:0;}
+  /* preuves à venir (voir les commentaires À FOURNIR) */
+  figure.proof{margin:2rem 0; max-width:38rem;}
+  figure.proof img{display:block; width:100%; height:auto; border:1px solid var(--rule);}
+  figure.proof figcaption{margin-top:0.5rem; font-size:0.85rem; color:var(--ink-2);}
+  pre.log{margin:2rem 0; max-width:38rem; padding:1rem 1.1rem; background:var(--paper-2); border-top:1px solid var(--ink); font-family:var(--mono); font-size:0.8rem; line-height:1.55; overflow-x:auto; white-space:pre;}
 
-  .project-visual{
-    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
-    padding:1.4rem; font-family:var(--font-mono); font-size:0.82rem;
-  }
-  .flow{display:flex; flex-direction:column; align-items:stretch; gap:0;}
-  .flow-step{
-    background:var(--bg-elevated-2); border:1px solid var(--border); border-radius:8px;
-    padding:0.6rem 0.9rem; text-align:center; color:var(--text-dim); font-size:0.78rem;
-  }
-  .flow-arrow{text-align:center; color:var(--text-faint); padding:0.15rem 0; font-size:0.8rem;}
-
-  .score-card{
-    display:flex; justify-content:space-between; align-items:center;
-    background:var(--bg-elevated-2); border:1px solid var(--border); border-radius:8px;
-    padding:0.55rem 0.85rem; margin-top:0.5rem; font-size:0.8rem;
-  }
-  .score-card .score{color:var(--accent-2); font-weight:500;}
-
-  .db-grid{display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1rem; margin-top:1rem;}
-  .db-grid div{display:flex; justify-content:space-between; font-size:0.8rem; color:var(--text-dim); border-bottom:1px dashed var(--border); padding-bottom:0.35rem;}
-  .db-grid div span:last-child{color:var(--accent-2);}
-
-  /* ---------- WORKFLOW ---------- */
-  .workflow-track{
-    display:grid; grid-template-columns:repeat(6, 1fr); gap:0.8rem; margin-top:2.8rem;
-  }
-  @media (max-width:900px){ .workflow-track{grid-template-columns:repeat(3, 1fr);} }
-  @media (max-width:560px){ .workflow-track{grid-template-columns:1fr 1fr;} }
-  .wf-step{
-    background:var(--bg-elevated); border:1px solid var(--border); border-radius:12px;
-    padding:1.1rem 0.9rem; text-align:center; position:relative;
-  }
-  .wf-step .label{font-family:var(--font-display); font-weight:700; font-size:0.86rem; letter-spacing:0.02em;}
-  .workflow-note{margin-top:2rem; max-width:60ch; font-size:0.98rem;}
-
-  /* ---------- STACK ---------- */
-  .stack-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:1.2rem;}
-  @media (max-width:900px){ .stack-grid{grid-template-columns:repeat(2, 1fr);} }
-  @media (max-width:560px){ .stack-grid{grid-template-columns:1fr;} }
-  .stack-group{
-    background:var(--bg-elevated); border:1px solid var(--border); border-radius:14px;
-    padding:1.5rem 1.4rem;
-  }
-  .stack-group .eyebrow{margin-bottom:1rem;}
-  .skill-levels{display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.1rem;}
-  .skill-level{display:flex; align-items:center; justify-content:space-between; gap:0.8rem;}
-  .skill-level .name{font-size:0.9rem; color:var(--text); font-weight:500;}
-  .skill-level .level{
-    font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.03em;
-    color:var(--accent); background:var(--accent-soft); padding:0.22rem 0.55rem;
-    border-radius:5px; white-space:nowrap; flex:none;
-  }
-  .skill-tags{display:flex; flex-wrap:wrap; gap:0.5rem; padding-top:1rem; border-top:1px solid var(--border);}
-  .skill-tags span{
-    font-family:var(--font-mono); font-size:0.76rem; color:var(--text-dim);
-    background:var(--bg-elevated-2); border:1px solid var(--border);
-    padding:0.32rem 0.65rem; border-radius:6px;
+  /* ---------- Autres projets : quatre longueurs ---------- */
+  .proj{padding:2rem 0; border-top:1px solid var(--rule);}
+  .proj:first-child{padding-top:0; border-top:0;}
+  .proj h3{font-size:1.6rem; line-height:1.15; margin-bottom:0.9rem;}
+  .proj p:last-child{margin-bottom:0;}
+  .proj-split{display:grid; grid-template-columns:minmax(0,1fr) 14rem; gap:2.5rem;}
+  .proj-split .note{margin-bottom:0;}
+  .proj-split ul{list-style:none; margin:0.4rem 0 0.8rem; padding:0;}
+  .proj-split li{padding:0.3rem 0; border-top:1px solid var(--rule); font-size:0.9rem;}
+  .proj-split li:first-child{border-top:0;}
+  .proj--short{display:grid; grid-template-columns:12rem minmax(0,1fr); gap:0.5rem 2rem; align-items:baseline;}
+  .proj--short h3{font-size:1.2rem; margin:0;}
+  .proj--short p{margin:0; max-width:38rem;}
+  .proj--concept{color:var(--ink-2); font-size:0.97rem;}
+  .proj--concept h3{font-size:1.2rem; color:var(--ink);}
+  .proj--concept .tag{display:block; font-size:0.88rem; font-style:italic; margin-bottom:0.6rem;}
+  .proj .txt{max-width:38rem;}
+  @media (max-width:820px){
+    .proj-split, .proj--short{grid-template-columns:1fr;}
+    .proj-split{gap:1.5rem;}
   }
 
-  /* ---------- TIMELINE ---------- */
-  .timeline{position:relative; padding-left:2.2rem; margin-top:1rem;}
-  .timeline::before{content:''; position:absolute; left:6px; top:6px; bottom:6px; width:1px; background:var(--border);}
-  .tl-item{position:relative; padding-bottom:2.4rem;}
-  .tl-item:last-child{padding-bottom:0;}
-  .tl-item::before{
-    content:''; position:absolute; left:-2.2rem; top:0.3rem; width:11px; height:11px;
-    border-radius:50%; background:var(--bg); border:2px solid var(--accent);
-  }
-  .tl-item.now::before{background:var(--accent-2); border-color:var(--accent-2); box-shadow:0 0 0 4px var(--accent-2-soft);}
-  .tl-year{font-family:var(--font-mono); font-size:0.78rem; color:var(--accent);}
-  .tl-item h3{font-size:1.05rem; margin-top:0.3rem;}
-  .tl-item .tl-sub{font-family:var(--font-mono); font-size:0.78rem; color:var(--text-faint); margin-top:0.25rem; display:block;}
-  .tl-item .role-list{margin-top:0.5rem; display:flex; flex-wrap:wrap; gap:0.5rem;}
-  .tl-item .role-list span{
-    font-size:0.8rem; color:var(--text-dim); background:var(--bg-elevated);
-    border:1px solid var(--border); padding:0.28rem 0.6rem; border-radius:6px;
-  }
-  .tl-item .tl-list{margin:0.8rem 0 0; padding-left:1.1rem; display:flex; flex-direction:column; gap:0.4rem;}
-  .tl-item .tl-list li{font-size:0.9rem; color:var(--text-dim);}
-  .tl-item .tl-list strong{color:var(--text); font-weight:600;}
+  /* ---------- Parcours ---------- */
+  .cv{list-style:none; margin:0; padding:0;}
+  .cv li{display:grid; grid-template-columns:9rem minmax(0,1fr); gap:0.25rem 2rem; padding:1.4rem 0; border-top:1px solid var(--rule);}
+  .cv li:first-child{border-top:1px solid var(--ink);}
+  .when{font-size:0.95rem; color:var(--ink-2); font-variant-numeric:tabular-nums;}
+  .cv h3{font-size:1.25rem; line-height:1.25;}
+  .where{margin:0.2rem 0 0.8rem; font-size:0.93rem; color:var(--ink-2);}
+  .cv p{max-width:38rem;}
+  .cv p:last-child{margin-bottom:0;}
+  @media (max-width:820px){ .cv li{grid-template-columns:1fr;} }
 
-  /* ---------- STATS ---------- */
-  .stats-band{
-    border-top:1px solid var(--border); border-bottom:1px solid var(--border);
-    display:grid; grid-template-columns:repeat(4, 1fr);
-  }
-  @media (max-width:700px){ .stats-band{grid-template-columns:repeat(2, 1fr);} }
-  .stat-cell{
-    padding:2.6rem 1.5rem; text-align:center; border-right:1px solid var(--border);
-  }
-  .stat-cell:last-child{border-right:none;}
-  @media (max-width:700px){ .stat-cell:nth-child(2n){border-right:none;} .stat-cell{border-bottom:1px solid var(--border);} .stat-cell:nth-last-child(-n+2){border-bottom:none;} }
-  .stat-cell .big{font-family:var(--font-mono); font-weight:500; font-size:2.4rem; color:var(--text);}
-  .stat-cell .big span{color:var(--accent);}
-  .stat-cell .cap{margin-top:0.4rem; font-size:0.85rem; color:var(--text-dim);}
+  /* ---------- Contact ---------- */
+  .say{font-family:var(--serif); font-size:clamp(1.8rem,4.2vw,2.9rem); line-height:1.15; letter-spacing:-0.015em; max-width:18em; margin-bottom:2.25rem;}
+  .contact .rows dd{font-size:1.02rem;}
 
-  /* ---------- ABOUT ---------- */
-  .about-grid{display:grid; grid-template-columns:1fr; gap:3.5rem;}
-  @media (max-width:900px){ .about-grid{grid-template-columns:1fr; gap:2rem;} }
-  .about-grid h2{font-size:clamp(1.5rem,3vw,2rem);}
-  .about-grid .desc{margin-top:1.2rem; font-size:1rem; max-width:56ch;}
-  .about-grid .desc + .desc{margin-top:1rem;}
-  .interest-chips{display:flex; flex-wrap:wrap; gap:0.6rem; align-content:flex-start;}
-  .interest-chips span{
-    font-family:var(--font-mono); font-size:0.8rem; padding:0.5rem 0.9rem;
-    border:1px solid var(--border); border-radius:20px; color:var(--text-dim);
-  }
+  footer{border-top:5px solid var(--ink); padding:1.25rem 0 2.5rem; font-size:0.88rem; color:var(--ink-2);}
+  footer .wrap{display:flex; flex-wrap:wrap; justify-content:space-between; gap:0.5rem 1.5rem;}
 
-  /* ---------- CONTACT ---------- */
-  .contact{
-    background:radial-gradient(120% 160% at 20% 0%, var(--hero-glow), transparent 55%), var(--bg-elevated);
-    border-radius:20px; padding:4rem 3rem; text-align:left;
-    border:1px solid var(--border);
-  }
-  @media (max-width:640px){ .contact{padding:2.8rem 1.6rem;} }
-  .contact h2{font-size:clamp(1.8rem,4vw,2.6rem); max-width:20ch;}
-  .contact p{margin-top:1rem; font-size:1.03rem; max-width:50ch;}
-  .contact-info{display:flex; flex-wrap:wrap; gap:0.6rem 1.6rem; margin-top:1.6rem;}
-  .contact-info span{display:flex; align-items:center; gap:0.5rem; font-size:0.88rem; color:var(--text-dim);}
-  .contact-info a{color:var(--text-dim); transition:color 0.15s;}
-  .contact-info a:hover{color:var(--accent);}
-  .ci-dot{width:5px; height:5px; border-radius:50%; background:var(--accent); flex:none;}
-  .contact-actions{display:flex; flex-wrap:wrap; gap:0.9rem; margin-top:2.2rem;}
-
-  footer{border-top:1px solid var(--border); padding:2.6rem 0;}
-  .footer-row{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;}
-  .footer-brand{font-family:var(--font-display); font-weight:800;}
-  .footer-tag{font-family:var(--font-mono); font-size:0.78rem; color:var(--text-faint); margin-top:0.3rem;}
-  .footer-links{display:flex; gap:1.5rem;}
-  .footer-links a{font-size:0.86rem; color:var(--text-dim);}
-  .footer-links a:hover{color:var(--accent);}
-
-  .reveal-init.reveal{opacity:1; transform:none;}
-  @media (prefers-reduced-motion: no-preference){
-    .reveal-init{opacity:0; transform:translateY(8px); transition:opacity 0.5s ease, transform 0.5s ease;}
+  @media print{
+    .skip,.menu-btn,.nav{display:none;}
+    body{background:#fff; color:#000;}
   }
 </style>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
-<header>
-  <nav>
-    <a href="#" class="logo">Tarek BOUDMAGH</a>
-    <div class="nav-links">
-      <a href="#accueil">Accueil</a>
-      <a href="#projects">Projets</a>
-      <a href="#skills">Compétences</a>
+<header class="mast">
+  <div class="wrap">
+    <a class="brand" href="#top">Tarek Boudmagh</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+    <nav class="nav" id="menu" aria-label="Navigation principale">
+      <a href="#faire">Ce que je fais</a>
+      <a href="#monitoring">Projets</a>
       <a href="#parcours">Parcours</a>
-      <a href="#about">À propos</a>
       <a href="#contact">Contact</a>
-    </div>
-    <div style="display:flex; align-items:center; gap:0.8rem;">
-      <a class="btn btn-primary nav-cta" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV (PDF)</a>
-      <button class="burger" id="burgerBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">☰</button>
-    </div>
-  </nav>
-  <div id="mobile-menu" hidden>
-    <a href="#accueil">Accueil</a>
-    <a href="#projects">Projets</a>
-    <a href="#skills">Compétences</a>
-    <a href="#parcours">Parcours</a>
-    <a href="#about">À propos</a>
-    <a href="#contact">Contact</a>
-    <a href="cv/Tarek_Boudmagh_CV.pdf" download style="color:var(--accent);">Télécharger mon CV (PDF)</a>
-    <a href="https://github.com/teamfada" target="_blank" rel="noopener" style="color:var(--accent);">GitHub ↗</a>
+      <a class="cv" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV (PDF)</a>
+    </nav>
   </div>
 </header>
-<div class="header-spacer" aria-hidden="true"></div>
 
-<main>
-  <section class="hero wrap" id="accueil">
-    <div class="hero-grid">
+<main id="contenu">
+
+  <!-- Ouverture : l'histoire d'abord -->
+  <section class="open wrap" id="top">
+    <div class="open-grid">
       <div>
-        <div class="name">Tizi Ouzou, Algérie</div>
-        <h1>Tarek Boudmagh<br>Spécialiste data &amp; digital, immobilier et SCPI</h1>
-        <p class="hero-skills">Data · Immobilier · Automatisation · SEO · WordPress · IA</p>
-        <p class="hero-lede">Je transforme la donnée immobilière en informations fiables, contenus utiles et outils automatisés.</p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-          <a href="#contact" class="btn btn-ghost">Me contacter</a>
+        <p class="dateline">Spécialiste data &amp; digital, immobilier et SCPI · Tizi Ouzou, Algérie</p>
+        <h1>Vérifier les chiffres, repérer les écarts.</h1>
+        <p class="stand">Chez Ooredoo et Djezzy, je centralisais les remontées de plus de 2&nbsp;000 personnes pour le reporting national. Mon travail : vérifier les chiffres, repérer les écarts.</p>
+        <div class="story">
+          <p>Depuis 2024, je fais la même chose avec la donnée SCPI, chez Starty Media, pour Fortuny Conseil et portail-scpi.fr. Mon suivi couvre plus de <strong>125&nbsp;SCPI</strong>. Les sites de <strong>53&nbsp;sociétés de gestion</strong> sont contrôlés chaque jour.</p>
         </div>
-        <div class="hero-tags">
-          <span class="mono" style="color:var(--accent); text-transform:none; letter-spacing:0;">Plus de 125 SCPI suivies au quotidien</span>
+        <div class="actions">
+          <a href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV (PDF)</a>
+          <a href="#contact">Me contacter</a>
         </div>
       </div>
-
-      <div class="portrait-frame reveal-init" id="heroPanel">
+      <figure class="portrait">
         <img src="img/tarek-boudmagh.jpg" alt="Portrait de Tarek Boudmagh" width="700" height="931" loading="eager">
-        <div class="portrait-caption">
-          <span class="live-dot"><i></i>Disponible pour de nouvelles opportunités</span>
-        </div>
-      </div>
+        <figcaption>Tarek Boudmagh, Tizi Ouzou (Algérie)</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section class="wrap" id="missions">
-    <div class="section-head">
-      <span class="eyebrow">Au quotidien</span>
-      <h2>Ce que je fais</h2>
-      <p>Je travaille sur l'écosystème SCPI : je collecte et vérifie la donnée, je la publie sous forme de contenus, et j'automatise les contrôles qui reviennent chaque jour. Le détail des outils est dans la section Projets.</p>
-    </div>
-    <div class="missions-grid">
-      <div class="mission-card reveal-init">
-        <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        </div>
-        <h3>Data immobilière</h3>
-        <p>Veille, collecte, vérification et mise à jour des données SCPI.</p>
+  <!-- 01 : ce que je fais (missions + méthode + compétences) -->
+  <section class="sec tight" id="faire" aria-labelledby="t-faire">
+    <div class="wrap sec-grid">
+      <div class="rail">
+        <span class="num" aria-hidden="true">01</span>
+        <h2 id="t-faire">Ce que je fais</h2>
       </div>
-      <div class="mission-card reveal-init">
-        <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
-        </div>
-        <h3>Documentation</h3>
-        <p>Suivi des bulletins, rapports annuels, documents réglementaires et publications des sociétés de gestion.</p>
-      </div>
-      <div class="mission-card reveal-init">
-        <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l7-5 7 5v12"/><path d="M9 21v-6h6v6"/></svg>
-        </div>
-        <h3>Acquisitions</h3>
-        <p>Recherche, vérification et intégration des acquisitions immobilières.</p>
-      </div>
-      <div class="mission-card reveal-init">
-        <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a13 13 0 0 1 0 18M12 3a13 13 0 0 0 0 18"/></svg>
-        </div>
-        <h3>Web &amp; SEO</h3>
-        <p>Gestion de sites WordPress, création de contenus, optimisation SEO et publication.</p>
-      </div>
-      <div class="mission-card reveal-init">
-        <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/></svg>
-        </div>
-        <h3>Tests et support</h3>
-        <p>Détection des anomalies, reproduction des bugs et suivi avec les développeurs.</p>
-      </div>
-      <div class="mission-card reveal-init">
-        <div class="mission-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-6M12 10V4M4 20h4M4 14h4M4 8h4M16 20h4M16 12h4M16 6h4"/></svg>
-        </div>
-        <h3>Automatisation</h3>
-        <p>Développement de scripts et d'outils pour réduire les tâches répétitives et fiabiliser les contrôles.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" id="projects">
-    <div class="section-head">
-      <span class="eyebrow">Réalisations</span>
-      <h2>Projets</h2>
-      <p>Cinq projets nés de la veille quotidienne de plus de 125 SCPI.</p>
-    </div>
-
-    <div class="project reveal-init">
       <div>
-        <h3>SCPI Monitoring</h3>
-        <p class="lede">Automatiser la veille documentaire des SCPI</p>
+        <dl class="rows">
+          <div class="row"><dt>Données SCPI</dt><dd><p>Je collecte les données et je les vérifie à la source avant de les publier. Je les tiens à jour chaque jour.</p></dd></div>
+          <div class="row"><dt>Documents</dt><dd><p>Je fais le suivi des bulletins trimestriels et des rapports annuels des sociétés de gestion, ainsi que de leurs documents réglementaires.</p></dd></div>
+          <div class="row"><dt>Acquisitions</dt><dd><p>Je recherche les acquisitions immobilières des SCPI. Je les vérifie avant de les intégrer à la base.</p></dd></div>
+          <div class="row"><dt>Web et SEO</dt><dd><p>J'administre des sites WordPress. J'y publie des contenus que j'optimise pour le référencement.</p></dd></div>
+          <div class="row"><dt>Automatisation</dt><dd><p>J'écris des scripts Python pour les contrôles qui reviennent chaque jour.</p></dd></div>
+          <div class="row"><dt>Tests et support</dt><dd><p>Je détecte les anomalies et je reproduis les bugs. Je fais ensuite le suivi de leur correction avec les développeurs.</p></dd></div>
+          <div class="row"><dt>Méthode</dt><dd><p>Je vérifie chaque information à sa source avant de la publier. Les contrôles qui se répètent, je les automatise.</p></dd></div>
+        </dl>
 
-        <div class="case-block">
-          <span class="case-label">Le problème</span>
-          <p>La surveillance manuelle de plusieurs dizaines de sites de sociétés de gestion pour détecter les nouveaux documents est longue et répétitive.</p>
+        <h3 class="sub">Outils</h3>
+        <dl class="rows tools">
+          <div class="row"><dt>Données et automatisation</dt><dd>Python, Selenium, Playwright, Streamlit, SQLite, web scraping, nettoyage de données, surveillance de données</dd></div>
+          <div class="row"><dt>Web</dt><dd>WordPress, administration de sites, gestion de contenu, maintenance éditoriale</dd></div>
+          <div class="row"><dt>SEO et mesure d'audience</dt><dd>SEO on-page, Google Search Console, Google Analytics, Google Discover, recherche de mots-clés, structuration Hn, métadonnées</dd></div>
+          <div class="row"><dt>Données immobilières</dt><dd>Data SCPI, veille documentaire, contrôle et vérification des données, analyse de données</dd></div>
+          <div class="row"><dt>IA</dt><dd>Prompt engineering, LLM, automatisation par IA, extraction et structuration de données, génération de contenu assistée</dd></div>
+          <div class="row"><dt>Support et coordination</dt><dd>Assistance technique, diagnostic d'anomalies, remontée de bugs, coordination avec les développeurs</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 : projet principal -->
+  <section class="sec loose" id="monitoring" aria-labelledby="t-monitoring">
+    <div class="wrap sec-grid sec-grid--3">
+      <div class="rail">
+        <span class="num" aria-hidden="true">02</span>
+        <h2 id="t-monitoring">SCPI Monitoring</h2>
+      </div>
+      <div class="main-text">
+        <p class="lede">Automatiser la veille documentaire des SCPI.</p>
+        <p>Surveiller à la main les sites de plusieurs dizaines de sociétés de gestion pour voir si un document est paru, c'est long et ça se répète. J'ai développé un crawler.</p>
+        <p>Il visite chaque jour les sites, détecte les nouveaux documents et les compare à un cache. Il repère les bulletins, distingue les publications trimestrielles des semestrielles et génère un rapport.</p>
+        <p>Je ne collecte que des documents publics. Je respecte les conditions d'utilisation des sites et je garde une fréquence de requêtes raisonnable.</p>
+        <p class="pull">Les sites de 53 sociétés de gestion, soit plus de 100 SCPI, sont contrôlés chaque jour. Chaque nouveau document est détecté sans vérification manuelle.</p>
+
+        <!-- À FOURNIR : capture anonymisée d'un rapport réel généré par le crawler (noms de clients et URL masqués).
+             Format attendu, à placer ici :
+             <figure class="proof"><img src="img/rapport-crawler.png" alt="DESCRIPTION" width="LARGEUR" height="HAUTEUR" loading="lazy"><figcaption>LÉGENDE</figcaption></figure> -->
+
+        <!-- À FOURNIR : court extrait de log du crawler (5 à 10 lignes réelles, URL et noms anonymisés).
+             Format attendu, à placer ici :
+             <pre class="log"><code>…</code></pre> -->
+      </div>
+      <aside class="margin" aria-label="Notes sur SCPI Monitoring">
+        <div class="note">
+          <span class="big" aria-hidden="true">53</span>
+          <p>sociétés de gestion contrôlées chaque jour</p>
         </div>
-        <div class="case-block">
-          <span class="case-label">La solution</span>
-          <p>Développement d'un système automatisé de crawling permettant de surveiller les sites des sociétés de gestion et de détecter les nouveaux documents disponibles. Collecte limitée aux documents publics, dans le respect des conditions d'utilisation des sites et avec une fréquence de requêtes raisonnable.</p>
+        <div class="note">
+          <b>Technologies</b>
+          <p>Python, Selenium, Playwright, traitement de PDF</p>
         </div>
-        <div class="case-block">
-          <span class="case-label">Technologies</span>
-          <div class="stack"><span>Python</span><span>Selenium</span><span>Playwright</span><span>Traitement de PDF</span></div>
+        <div class="note">
+          <b>Statut</b>
+          <p>Code source privé (projet en production).</p>
         </div>
-        <div class="case-block">
-          <span class="case-label">Fonctionnalités</span>
-          <div class="feat-list">
-            <div>Suivi quotidien de plusieurs sites et plateformes de gestion</div>
-            <div>Détection des nouveaux documents</div>
-            <div>Identification des bulletins</div>
-            <div>Distinction publications trimestrielles / semestrielles</div>
-            <div>Système de cache</div>
-            <div>Génération de rapports</div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 03 : autres projets -->
+  <section class="sec tight" id="projets" aria-labelledby="t-projets">
+    <div class="wrap sec-grid">
+      <div class="rail">
+        <span class="num" aria-hidden="true">03</span>
+        <h2 id="t-projets">Autres projets</h2>
+      </div>
+      <div>
+        <article class="proj">
+          <div class="proj-split">
+            <div>
+              <h3>SCPI Data</h3>
+              <p>Les données SCPI viennent de sources multiples et changent en continu. Sans structure, elles perdent en fiabilité.</p>
+              <p>Je gère une base dédiée, avec Python et SQLite. Plus de 125&nbsp;SCPI y sont suivies et elle est actualisée chaque jour.</p>
+            </div>
+            <div class="note">
+              <b>Données traitées</b>
+              <ul>
+                <li>Prix de souscription</li>
+                <li>Capitalisation</li>
+                <li>Performances</li>
+                <li>Acquisitions</li>
+                <li>Démembrement</li>
+                <li>Documents officiels</li>
+              </ul>
+              <p>Données confidentielles (client). Schéma technique anonymisé disponible <a href="#contact">sur demande</a>.</p>
+            </div>
           </div>
-        </div>
-        <div class="case-block result">
-          <span class="case-label">Résultat</span>
-          <p>Les sites de 53 sociétés de gestion (plus de 100 SCPI) sont contrôlés automatiquement chaque jour : chaque nouveau document est détecté sans aucune vérification manuelle.</p>
-        </div>
-        <p class="repo-note">Code source privé (projet en production).</p>
-      </div>
-      <div class="project-visual">
-        <div class="flow">
-          <div class="flow-step">Sites sociétés de gestion</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Crawler (Selenium / Playwright)</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Détection nouveaux PDF</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step">Comparaison avec cache</div>
-          <div class="flow-arrow">↓</div>
-          <div class="flow-step" style="border-color:var(--accent); color:var(--text);">Rapport généré</div>
-        </div>
+        </article>
+
+        <article class="proj">
+          <h3>SEO immobilier</h3>
+          <p class="txt">Un bulletin trimestriel ou un rapport annuel brut n'est ni lisible ni visible sur Google. Pour chaque fiche, je pars de l'expression clé et je structure le texte en H1/H2. J'écris la méta-description et j'ajoute les données structurées. Puis je publie sur WordPress et je surveille les performances dans Google Search Console.</p>
+          <!-- À FOURNIR : liens vers des articles que j'ai réellement mis à jour sur demembrement-magazine.fr et sur la-lmnp.net
+               (URL exactes, avec un court intitulé chacun). Format attendu, à placer ici :
+               <p class="txt">Articles mis à jour : <a href="URL">INTITULÉ</a> (demembrement-magazine.fr), <a href="URL">INTITULÉ</a> (la-lmnp.net).</p> -->
+        </article>
+
+        <article class="proj proj--short">
+          <h3>Forum SCPI</h3>
+          <p>Je modère le forum de portail-scpi.fr. J'y lance des sujets à partir de l'actualité des SCPI : nouvelles publications des sociétés de gestion, changements de prix de part, questions fréquentes des investisseurs. Je vérifie que les échanges restent conformes à la réglementation.</p>
+        </article>
+
+        <article class="proj proj--concept">
+          <h3>Comparateur SCPI selon le profil investisseur</h3>
+          <span class="tag">Concept, prototype non publié</span>
+          <p class="txt">J'ai conçu la maquette d'un comparateur qui classerait les SCPI selon le profil de l'investisseur (montant, objectif, horizon, zone, démembrement) plutôt que selon la seule performance. Ce n'est qu'un prototype, jamais publié ni commercialisé : un tel outil devrait être utilisé dans le cadre d'un conseiller en investissements financiers (CIF) habilité.</p>
+        </article>
       </div>
     </div>
+  </section>
 
-    <div class="project reverse reveal-init">
+  <!-- 04 : parcours -->
+  <section class="sec tight" id="parcours" aria-labelledby="t-parcours">
+    <div class="wrap sec-grid">
+      <div class="rail">
+        <span class="num" aria-hidden="true">04</span>
+        <h2 id="t-parcours">Parcours</h2>
+      </div>
+      <ol class="cv">
+        <li>
+          <div class="when">2021 – 2023</div>
+          <div>
+            <h3>Superviseur régional, puis coordinateur national</h3>
+            <p class="where">Télécommunications, Ooredoo &amp; Djezzy</p>
+            <p>Je suis passé de la supervision régionale à la coordination nationale. J'ai encadré les superviseurs régionaux et coordonné plus de 2&nbsp;000 collaborateurs en Algérie. Je pilotais les projets Ooredoo (gardiennage de sites télécom) et Djezzy (assistance technique), je suivais la performance des équipes et je faisais le reporting à la direction nationale.</p>
+          </div>
+        </li>
+        <li>
+          <div class="when">2024 – aujourd'hui</div>
+          <div>
+            <h3>Spécialiste data et contenu, Starty Media</h3>
+            <p class="where">Pour Fortuny Conseil et portail-scpi.fr</p>
+            <p>J'ai commencé par la mise à jour des données SCPI, des documents réglementaires et des contenus WordPress. Le SEO est venu ensuite, puis l'automatisation de la veille et les outils internes. Je fais aussi le suivi de souscriptions pour un acteur du secteur.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- 05 : contact -->
+  <section class="sec loose contact" id="contact" aria-labelledby="t-contact">
+    <div class="wrap sec-grid">
+      <div class="rail">
+        <span class="num" aria-hidden="true">05</span>
+        <h2 id="t-contact">Contact</h2>
+      </div>
       <div>
-        <span class="project-num">Concept</span>
-        <h3>Comparateur SCPI selon le profil investisseur</h3>
-        <p class="lede">Classer les SCPI selon le besoin de l'investisseur, pas seulement selon leur rendement</p>
-
-        <div class="case-block">
-          <span class="case-label">Le problème</span>
-          <p>Les comparateurs SCPI classiques se limitent souvent à un classement par performance, sans tenir compte du profil réel de l'investisseur.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">La solution</span>
-          <p>Conception d'une maquette de comparateur basé sur le profil investisseur (montant, objectif, horizon, zone, démembrement) plutôt que sur la seule performance — une exploration de concept, non déployée en production.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">Approche</span>
-          <div class="stack"><span>Data</span><span>Scoring</span><span>UX</span><span>SCPI</span></div>
-        </div>
-        <p class="repo-note">Prototype non publié.</p>
-      </div>
-      <div class="project-visual">
-        <span class="demo-badge">Exemple illustratif — maquette de concept</span>
-        <div class="db-grid" style="grid-template-columns:1fr; margin-top:0;">
-          <div><span>Montant</span><span>50 000 €</span></div>
-          <div><span>Objectif</span><span>Revenus</span></div>
-          <div><span>Horizon</span><span>10 ans</span></div>
-          <div><span>Zone</span><span>Europe</span></div>
-          <div><span>Démembrement</span><span>Oui</span></div>
-        </div>
-        <div class="flow-arrow" style="margin-top:0.6rem;">↓ analyse du profil ↓</div>
-        <div class="score-card"><span>SCPI A</span><span class="score">92/100</span></div>
-        <div class="score-card"><span>SCPI B</span><span class="score">87/100</span></div>
-        <div class="score-card"><span>SCPI C</span><span class="score">83/100</span></div>
-        <p style="margin-top:0.9rem; font-size:0.72rem; line-height:1.5; color:var(--text-dim);">Concept non commercialisé. Un outil de ce type devrait être utilisé dans le cadre d'un conseiller en investissements financiers (CIF) habilité ; les performances passées ne préjugent pas des performances futures.</p>
-      </div>
-    </div>
-
-    <div class="project reveal-init">
-      <div>
-        <h3>SCPI Data</h3>
-        <p class="lede">Une base de données immobilière structurée</p>
-
-        <div class="case-block">
-          <span class="case-label">Le problème</span>
-          <p>Les données SCPI (prix, capitalisation, performances, acquisitions, démembrement) proviennent de sources multiples et évoluent en continu : sans structuration, elles perdent en fiabilité.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">La solution</span>
-          <p>Gestion, structuration et mise à jour d'une base de données dédiée aux SCPI, avec suivi des informations financières et réglementaires.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">Données traitées</span>
-          <div class="stack"><span>Prix de souscription</span><span>Capitalisation</span><span>Performances</span><span>Acquisitions</span><span>Démembrement</span><span>Documents officiels</span></div>
-        </div>
-        <div class="case-block">
-          <span class="case-label">Outils</span>
-          <div class="stack"><span>Python</span><span>SQLite</span><span>Pipelines de données</span></div>
-        </div>
-        <div class="case-block result">
-          <span class="case-label">Résultat</span>
-          <p>Plus de 125 SCPI suivies dans une base actualisée chaque jour : prix, performances, acquisitions et documents réglementaires.</p>
-        </div>
-        <p class="repo-note">Données confidentielles (client) — schéma technique anonymisé disponible <a href="#contact">sur demande</a>.</p>
-      </div>
-      <div class="project-visual">
-        <div class="panel-title" style="margin-bottom:0.9rem;">Base SCPI — 125+ SCPI</div>
-        <div class="db-grid">
-          <div><span>Prix</span><span>✓</span></div>
-          <div><span>Taux de distribution</span><span>✓</span></div>
-          <div><span>Capitalisation</span><span>✓</span></div>
-          <div><span>Acquisitions</span><span>✓</span></div>
-          <div><span>Documents</span><span>✓</span></div>
-          <div><span>Démembrement</span><span>✓</span></div>
-        </div>
-        <div class="panel-foot" style="margin-top:1.1rem;"><i></i>Mise à jour quotidienne</div>
-      </div>
-    </div>
-
-    <div class="project solo reveal-init">
-      <div>
-        <h3>SEO immobilier</h3>
-        <p class="lede">Transformer une donnée brute en contenu performant</p>
-
-        <div class="case-block">
-          <span class="case-label">Le problème</span>
-          <p>Une donnée SCPI brute (bulletin trimestriel, rapport annuel, fiche produit) n'est ni lisible, ni visible sur les moteurs de recherche sans travail éditorial.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">La méthodologie</span>
-          <p>Recherche de l'expression clé, structuration en H1/H2, rédaction d'une méta-description, ajout de données structurées, puis publication sur WordPress.</p>
-        </div>
-        <div class="case-block">
-          <span class="case-label">Outils</span>
-          <div class="stack"><span>WordPress</span><span>Google Search Console</span><span>SEO on-page</span></div>
-        </div>
-        <div class="case-block result">
-          <span class="case-label">Résultat</span>
-          <p>Chaque fiche publiée sur WordPress suit la même méthode : recherche du mot-clé, structure H1/H2, méta-description et données structurées, puis suivi des performances dans Google Search Console.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="project solo reveal-init">
-      <div>
-        <h3>Forum SCPI</h3>
-        <p style="margin-top:1rem; font-size:0.94rem;">Je modère le forum de portail-scpi.fr et j'y lance des sujets à partir de l'actualité des SCPI : nouvelles publications des sociétés de gestion, changements de prix de part, questions fréquentes des investisseurs. Je vérifie aussi que les échanges restent conformes à la réglementation.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Façon de travailler</span>
-      <h2>Méthode</h2>
-    </div>
-    <div class="workflow-track">
-      <div class="wf-step reveal-init"><div class="label">Veille</div></div>
-      <div class="wf-step reveal-init"><div class="label">Collecte</div></div>
-      <div class="wf-step reveal-init"><div class="label">Vérification</div></div>
-      <div class="wf-step reveal-init"><div class="label">Structuration</div></div>
-      <div class="wf-step reveal-init"><div class="label">Automatisation</div></div>
-      <div class="wf-step reveal-init"><div class="label">Publication</div></div>
-    </div>
-    <p class="workflow-note">Je vérifie chaque information à sa source avant de la publier, et j'automatise les contrôles qui se répètent.</p>
-  </section>
-
-  <section class="wrap" id="skills">
-    <div class="section-head">
-      <span class="eyebrow">Outils et savoir-faire</span>
-      <h2>Compétences</h2>
-    </div>
-    <div class="stack-grid">
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Data et automatisation</span>
-        <div class="skill-tags" style="border-top:none; padding-top:0;">
-          <span>Python</span><span>Selenium</span>
-          <span>Playwright</span><span>Streamlit</span><span>SQLite</span><span>Web scraping</span><span>Nettoyage de données</span><span>Surveillance de données</span>
-        </div>
-      </div>
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Web</span>
-        <div class="skill-tags" style="border-top:none; padding-top:0;">
-          <span>WordPress</span>
-          <span>Administration de sites</span><span>Gestion de contenu</span><span>Maintenance éditoriale</span>
-        </div>
-      </div>
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">SEO et mesure d'audience</span>
-        <div class="skill-tags" style="border-top:none; padding-top:0;">
-          <span>SEO on-page</span>
-          <span>Google Search Console</span><span>Google Analytics</span><span>Google Discover</span><span>Recherche de mots-clés</span><span>Structuration Hn</span><span>Métadonnées</span>
-        </div>
-      </div>
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Données immobilières</span>
-        <div class="skill-tags" style="border-top:none; padding-top:0;">
-          <span>Data SCPI</span>
-          <span>Veille documentaire</span><span>Contrôle &amp; vérification des données</span><span>Analyse de données</span>
-        </div>
-      </div>
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">IA</span>
-        <div class="skill-tags" style="border-top:none; padding-top:0;">
-          <span>Prompt Engineering</span>
-          <span>LLM</span><span>Automatisation par IA</span><span>Extraction &amp; structuration de données</span><span>Génération de contenu assistée</span>
-        </div>
-      </div>
-      <div class="stack-group reveal-init">
-        <span class="eyebrow" style="color:var(--text-faint);">Support et coordination</span>
-        <div class="skill-tags" style="border-top:none; padding-top:0;">
-          <span>Assistance technique</span><span>Diagnostic d'anomalies</span><span>Remontée de bugs</span><span>Coordination avec les développeurs</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" id="parcours">
-    <div class="section-head">
-      <span class="eyebrow">Expérience</span>
-      <h2>Parcours</h2>
-    </div>
-    <div class="timeline">
-      <div class="tl-item reveal-init">
-        <div class="tl-year">2021 – 2023</div>
-        <h3>Superviseur régional, puis coordinateur national</h3>
-        <span class="tl-sub">Télécommunications — Ooredoo &amp; Djezzy</span>
-        <p style="margin-top:0.6rem; font-size:0.92rem;">Progression d'un poste de supervision régionale vers une fonction de coordination nationale, avec le pilotage des opérations et la coordination de plus de 2 000 collaborateurs en Algérie.</p>
-        <ul class="tl-list">
-          <li>Supervision des opérations télécom, d'abord en région puis au niveau national</li>
-          <li>Management des superviseurs régionaux et coordination de plus de <strong>2 000 collaborateurs</strong></li>
-          <li>Pilotage des projets <strong>Ooredoo (gardiennage de sites télécom)</strong> et <strong>Djezzy (assistance technique)</strong></li>
-          <li>Suivi des performances des équipes et reporting à la direction nationale</li>
-        </ul>
-      </div>
-      <div class="tl-item now reveal-init">
-        <div class="tl-year">2024 – aujourd'hui</div>
-        <h3>Spécialiste data et contenu — Starty Media</h3>
-        <span class="tl-sub">Pour Fortuny Conseil et portail-scpi.fr</span>
-        <p style="margin-top:0.6rem; font-size:0.92rem;">J'ai commencé par la mise à jour des données SCPI, des documents réglementaires et des contenus WordPress. Mes missions se sont ensuite élargies au SEO, puis à l'automatisation de la veille et au développement d'outils internes.</p>
-        <p style="margin-top:0.6rem; font-size:0.92rem;">Chez les opérateurs télécom, je centralisais les remontées de plus de 2 000 personnes pour le reporting national : vérifier les chiffres, repérer les écarts. C'est le même réflexe que j'applique aujourd'hui à la donnée SCPI.</p>
-        <div class="role-list"><span>Data SCPI</span><span>WordPress</span><span>SEO</span><span>Contenu</span><span>Automatisation</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" id="about">
-    <div class="about-grid">
-      <div class="reveal-init">
-        <span class="eyebrow">À propos</span>
-        <h2>Je travaille sur la donnée SCPI depuis 2024</h2>
-        <p class="desc">Mon parcours m'a progressivement amené vers un profil hybride combinant immobilier, data, contenu et technologie.</p>
-        <p class="desc">Aujourd'hui, je travaille principalement autour de la donnée immobilière et des plateformes digitales. Je m'intéresse particulièrement à l'automatisation des tâches répétitives, à la fiabilisation des informations et à la création d'outils permettant de mieux exploiter la donnée.</p>
-        <p class="desc">Depuis 2024, je gère la donnée SCPI et les opérations digitales chez <strong style="color:var(--text);">Starty Media</strong>, pour le compte du cabinet <strong style="color:var(--text);">Fortuny Conseil</strong> et de sa plateforme <strong style="color:var(--text);">portail-scpi.fr</strong>. Mes missions couvrent le contrôle et la mise à jour de la documentation réglementaire, le suivi de souscriptions pour un acteur du secteur, l'administration éditoriale de sites WordPress ainsi que l'automatisation des contrôles et processus de gestion des données.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" id="contact">
-    <div class="contact reveal-init">
-      <span class="eyebrow">Contact</span>
-      <h2>Vous avez un projet data, digital ou immobilier ?</h2>
-      <p>Je suis ouvert aux opportunités professionnelles, collaborations et projets liés à la data immobilière, au digital, au SEO, à l'automatisation et aux outils IA.</p>
-      <div class="contact-info">
-        <span><i class="ci-dot"></i>Tizi Ouzou, Algérie</span>
-        <span><i class="ci-dot"></i><a href="tel:+213551233332" class="mono">+213 551 23 33 32</a></span>
-        <span><i class="ci-dot"></i><a href="mailto:Boudmaghtrk@gmail.com" class="mono">Boudmaghtrk@gmail.com</a></span>
-      </div>
-      <div class="contact-actions">
-        <a class="btn btn-primary" href="mailto:Boudmaghtrk@gmail.com">Me contacter</a>
-        <a class="btn btn-ghost" href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">Voir LinkedIn</a>
-        <a class="btn btn-ghost" href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn btn-ghost" href="tel:+213551233332">Appeler</a>
-        <a class="btn btn-ghost" href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV (PDF)</a>
+        <p class="say">Je suis ouvert aux opportunités professionnelles et aux collaborations. Écrivez-moi ou appelez-moi.</p>
+        <dl class="rows">
+          <div class="row"><dt>E-mail</dt><dd><a href="mailto:Boudmaghtrk@gmail.com">Boudmaghtrk@gmail.com</a></dd></div>
+          <div class="row"><dt>Téléphone</dt><dd><a href="tel:+213551233332">+213 551 23 33 32</a></dd></div>
+          <div class="row"><dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">linkedin.com/in/boudmagh-tarek-02753b30<span class="sr"> (s'ouvre dans un nouvel onglet)</span></a></dd></div>
+          <div class="row"><dt>GitHub</dt><dd><a href="https://github.com/teamfada" target="_blank" rel="noopener">github.com/teamfada<span class="sr"> (s'ouvre dans un nouvel onglet)</span></a></dd></div>
+          <div class="row"><dt>CV</dt><dd><a href="cv/Tarek_Boudmagh_CV.pdf" download>Télécharger mon CV (PDF)</a></dd></div>
+          <div class="row"><dt>Lieu</dt><dd>Tizi Ouzou, Algérie</dd></div>
+        </dl>
       </div>
     </div>
   </section>
 </main>
 
-<footer class="wrap">
-  <div class="footer-row">
-    <div>
-      <div class="footer-brand">Tarek BOUDMAGH</div>
-      <div class="footer-tag">Data et digital pour l'immobilier</div>
-    </div>
-    <div class="footer-links">
-      <a href="https://www.linkedin.com/in/boudmagh-tarek-02753b30/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/teamfada" target="_blank" rel="noopener">GitHub</a>
-      <a href="mailto:Boudmaghtrk@gmail.com">Email</a>
-    </div>
+<footer>
+  <div class="wrap">
+    <span>© 2026 Tarek Boudmagh</span>
+    <a href="#top">Haut de page</a>
   </div>
-  <div class="footer-tag" style="margin-top:1.4rem;">© 2026 Tarek Boudmagh</div>
 </footer>
 
 <script>
   (function(){
-    var burger = document.getElementById('burgerBtn');
-    var menu = document.getElementById('mobile-menu');
-    burger.addEventListener('click', function(){
-      var isHidden = menu.hasAttribute('hidden');
-      if(isHidden){ menu.removeAttribute('hidden'); burger.setAttribute('aria-expanded','true'); }
-      else { menu.setAttribute('hidden',''); burger.setAttribute('aria-expanded','false'); }
-    });
-    menu.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){ menu.setAttribute('hidden',''); burger.setAttribute('aria-expanded','false'); });
-    });
-
-    if('IntersectionObserver' in window){
-      var els = document.querySelectorAll('.reveal-init');
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(e){
-          if(e.isIntersecting){ e.target.classList.add('reveal'); io.unobserve(e.target); }
-        });
-      }, {threshold:0.01, rootMargin:'0px 0px -40px 0px'});
-      els.forEach(function(el){ io.observe(el); });
-    } else {
-      document.querySelectorAll('.reveal-init').forEach(function(el){ el.classList.add('reveal'); });
+    var btn = document.getElementById('menuBtn');
+    var menu = document.getElementById('menu');
+    function setOpen(open){
+      menu.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      btn.textContent = open ? 'Fermer' : 'Menu';
     }
+    btn.addEventListener('click', function(){ setOpen(!menu.classList.contains('open')); });
+    menu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ setOpen(false); });
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && menu.classList.contains('open')){ setOpen(false); btn.focus(); }
+    });
   })();
 </script>
 </body>
